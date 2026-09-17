@@ -97,6 +97,11 @@ export default function GameSchedule({
         </p>
       )}
 
+      {gamesForView.some((game) => game.division.startsWith("Softball - ")) && (
+        <p className="pending-schedule">
+          Softball Season schedule not yet final.
+        </p>
+      )}
     </section>
   );
 }

@@ -2,7 +2,7 @@
   {
     "id": "team-02-open",
     "team": "LP - ChiquiTrinas - Munoz/Becerra",
-    "division": "Softball - Minor",
+    "division": "Softball - Minors",
     "day": "Monday",
     "field": "East",
     "start": "5:30 PM",
@@ -11,7 +11,7 @@
   {
     "id": "lp-bandits-munoz-becerra",
     "team": "LP Bandits - Munoz/Becerra",
-    "division": "Baseball - Player Pitch",
+    "division": "Baseball - Minors A",
     "day": "Monday",
     "field": "East",
     "start": "7:00 PM",
@@ -20,7 +20,7 @@
   {
     "id": "lp-the-mighty-as-beltran",
     "team": "LP The Mighty A's - Beltran",
-    "division": "Baseball - Coach/Machine",
+    "division": "Baseball - Minors B",
     "day": "Tuesday",
     "field": "East",
     "start": "5:30 PM",
@@ -29,7 +29,7 @@
   {
     "id": "lp-heavy-hitters-covarrubias",
     "team": "LP Heavy Hitters - Covarrubias",
-    "division": "Baseball - Coach/Machine",
+    "division": "Baseball - Minors B",
     "day": "Thursday",
     "field": "West",
     "start": "5:30 PM",
@@ -38,7 +38,7 @@
   {
     "id": "lp-coyotes-rodriguez",
     "team": "LP Coyotes - Rodriguez",
-    "division": "Baseball - Major",
+    "division": "Baseball - Majors",
     "day": "Wednesday",
     "field": "East",
     "start": "7:00 PM",
@@ -47,7 +47,7 @@
   {
     "id": "lp-red-tails-gomez-coach-machine",
     "team": "LP Red Tails - Gomez",
-    "division": "Baseball - Coach/Machine",
+    "division": "Baseball - Minors B",
     "day": "Thursday",
     "field": "East",
     "start": "5:30 PM",
@@ -56,7 +56,7 @@
   {
     "id": "lp-red-tails-gomez-player-pitch",
     "team": "LP Red Tails - Gomez",
-    "division": "Baseball - Player Pitch",
+    "division": "Baseball - Minors A",
     "day": "Thursday",
     "field": "East",
     "start": "7:00 PM",
@@ -65,7 +65,7 @@
   {
     "id": "lp-strikers-salas",
     "team": "LP Strikers - Salas",
-    "division": "Baseball - Coach/Machine",
+    "division": "Baseball - Minors B",
     "day": "Monday",
     "field": "West",
     "start": "5:30 PM",
@@ -83,7 +83,7 @@
   {
     "id": "lp-pocolocas-cortez",
     "team": "LP PocoLocas - Cortez",
-    "division": "Softball - Minor",
+    "division": "Softball - Minors",
     "day": "Wednesday",
     "field": "East",
     "start": "5:30 PM",
@@ -92,7 +92,7 @@
   {
     "id": "lp-titans-svehla",
     "team": "LP Titans - Svehla",
-    "division": "Baseball - Player Pitch",
+    "division": "Baseball - Minors A",
     "day": "Tuesday",
     "field": "West",
     "start": "7:00 PM",
@@ -101,7 +101,7 @@
   {
     "id": "lp-thunderbolts-silva-dager",
     "team": "LP Thunderbolts - Silva/Dager",
-    "division": "Baseball - Coach/Machine",
+    "division": "Baseball - Minors B",
     "day": "Tuesday",
     "field": "West",
     "start": "5:30 PM",
@@ -110,7 +110,7 @@
   {
     "id": "lp-dirtbags-ybarra",
     "team": "LP Dirtbags - Ybarra",
-    "division": "Baseball - Major",
+    "division": "Baseball - Majors",
     "day": "Wednesday",
     "field": "West",
     "start": "7:00 PM",
@@ -119,7 +119,7 @@
   {
     "id": "lp-diamond-girls-lugo",
     "team": "LP Diamond Girls - Lugo",
-    "division": "Softball - Major",
+    "division": "Softball - Majors",
     "day": "Wednesday",
     "field": "West",
     "start": "5:30 PM",
