@@ -18,8 +18,6 @@ body {
   justify-content: center;
   align-items: center;
   padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
   z-index: 20;
   text-align: center;
 
@@ -49,8 +47,6 @@ body {
   background: white;
   border-radius: 20px;
   padding: 1.25rem 2rem;
-  position: sticky;
-  top: 9.7rem;
   z-index: 10;
 
   box-shadow: 0 8px 30px rgba(0,0,0,.15);
@@ -255,6 +251,5 @@ button:hover {
 
   .card {
     padding: 1rem;
-    top: 8rem;
   }
 }
