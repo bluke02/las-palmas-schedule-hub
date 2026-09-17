@@ -1291,12 +1291,12 @@
     "date": "2026-09-19",
     "day": "Saturday",
     "start": "2:00 PM",
-    "end": "",
+    "end": "3:30 PM",
     "division": "Softball - Seniors",
     "rawDivision": "Seniors",
-    "home": "LP Fabulosas - Masino",
-    "away": "Storm",
-    "location": "Las Palmas",
+    "home": "SouthBay Storm",
+    "away": "LP Fabulosas - Masino",
+    "location": "South Bay",
     "field": "SBLL Field 4"
   },
   {
@@ -1320,8 +1320,8 @@
     "end": "1:00 PM",
     "division": "Softball - Majors",
     "rawDivision": "Majors",
-    "home": "SouthBay Diamonds",
-    "away": "LP Diamond Girls - Lugo",
+    "home": "LP Diamond Girls - Lugo",
+    "away": "SouthBay Diamonds",
     "location": "Las Palmas",
     "field": "West Field"
   },
