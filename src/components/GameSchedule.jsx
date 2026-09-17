@@ -66,8 +66,8 @@ export default function GameSchedule({
                         <tr>
                           <th scope="col">Date</th>
                           <th scope="col">Time</th>
-                          <th scope="col">Home Team</th>
                           <th scope="col">Away Team</th>
+                          <th scope="col">Home Team</th>
                           <th scope="col">Location</th>
                           <th scope="col">Field</th>
                         </tr>
@@ -77,8 +77,8 @@ export default function GameSchedule({
                           <tr key={game.id}>
                             <td>{formatDate(game.date)}</td>
                             <td>{game.start} - {game.end}</td>
-                            <td>{game.home}</td>
                             <td>{game.away}</td>
+                            <td>{game.home}</td>
                             <td>{game.location}</td>
                             <td>{game.field}</td>
                           </tr>
