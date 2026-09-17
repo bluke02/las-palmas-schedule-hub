@@ -226,6 +226,14 @@ tbody tr:hover {
   background: #f8fbff;
 }
 
+.field-revision {
+  color: #64748b;
+  display: block;
+  font-size: 0.75rem;
+  margin-top: 0.35rem;
+  white-space: nowrap;
+}
+
 .makeup-slots {
   margin-top: 1.5rem;
 }

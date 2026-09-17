@@ -1,4 +1,5 @@
 import games from "../data/games.json";
+import gameRevisions from "../data/gameRevisions.json";
 import schedule from "../data/schedule.json";
 
 function formatDate(date) {
@@ -7,6 +8,13 @@ function formatDate(date) {
     day: "numeric",
     year: "numeric",
   }).format(new Date(`${date}T12:00:00`));
+}
+
+function formatRevisionTimestamp(timestamp) {
+  return new Intl.DateTimeFormat("en-US", {
+    dateStyle: "medium",
+    timeStyle: "short",
+  }).format(new Date(timestamp));
 }
 
 export default function GameSchedule({
@@ -80,7 +88,17 @@ export default function GameSchedule({
                             <td>{game.away}</td>
                             <td>{game.home}</td>
                             <td>{game.location}</td>
-                            <td>{game.field}</td>
+                            <td>
+                              {game.field}
+                              {gameRevisions[game.field] && (
+                                <span className="field-revision">
+                                  Updated{" "}
+                                  {formatRevisionTimestamp(
+                                    gameRevisions[game.field]
+                                  )}
+                                </span>
+                              )}
+                            </td>
                           </tr>
                         ))}
                       </tbody>
