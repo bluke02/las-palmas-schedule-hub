@@ -17,6 +17,31 @@ function formatRevisionTimestamp(timestamp) {
   }).format(new Date(timestamp));
 }
 
+function timeToMinutes(time) {
+  if (time === "TBD") {
+    return Number.MAX_SAFE_INTEGER;
+  }
+
+  const [, hour, minute, meridiem] = time.match(
+    /^(\d{1,2}):(\d{2})\s(AM|PM)$/
+  );
+  let normalizedHour = Number(hour) % 12;
+
+  if (meridiem === "PM") {
+    normalizedHour += 12;
+  }
+
+  return normalizedHour * 60 + Number(minute);
+}
+
+function sortGames(gamesToSort) {
+  return [...gamesToSort].sort(
+    (a, b) =>
+      a.date.localeCompare(b.date) ||
+      timeToMinutes(a.start) - timeToMinutes(b.start)
+  );
+}
+
 export default function GameSchedule({
   selectedProgram,
   selectedDivision,
@@ -47,7 +72,9 @@ export default function GameSchedule({
       program,
       divisions: divisions.map((division) => ({
         division,
-        games: programGames.filter((game) => game.division === division),
+        games: sortGames(
+          programGames.filter((game) => game.division === division)
+        ),
       })),
     };
   });
