@@ -146,6 +146,39 @@ select {
   margin-top: 1.5rem;
 }
 
+.program-schedules {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.program-schedule {
+  background: #eaf2fc;
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.program-schedule > h3 {
+  color: var(--lp-navy);
+  margin: 0 0 1rem;
+  padding: 0 0.25rem;
+}
+
+.division-schedule {
+  background: white;
+  border-radius: 12px;
+  margin-top: 1rem;
+  overflow: hidden;
+}
+
+.division-schedule h4 {
+  background: var(--lp-navy);
+  color: white;
+  margin: 0;
+  padding: 0.85rem 1rem;
+}
+
 .field-schedule {
   background: white;
   border-radius: 16px;

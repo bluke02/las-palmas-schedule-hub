@@ -27,53 +27,68 @@ export default function GameSchedule({
         game.home === selectedTeamName ||
         game.away === selectedTeamName)
   );
-  const gamesByField = [...new Set(gamesForView.map((game) => game.field))].map(
-    (field) => ({
-      field,
-      games: gamesForView.filter((game) => game.field === field),
-    })
-  );
+  const gamesByProgram = [...new Set(
+    gamesForView.map((game) => game.division.split(" - ")[0])
+  )].map((program) => {
+    const programGames = gamesForView.filter(
+      (game) => game.division.split(" - ")[0] === program
+    );
+    const divisions = [...new Set(programGames.map((game) => game.division))];
+
+    return {
+      program,
+      divisions: divisions.map((division) => ({
+        division,
+        games: programGames.filter((game) => game.division === division),
+      })),
+    };
+  });
 
   return (
     <section className="schedule-overview" aria-labelledby="games-heading">
       <h2 id="games-heading">Game Schedule</h2>
       <p className="schedule-intro">
-        Fall 2026 games grouped by field and filtered by the selected program,
-        division, or team.
+        Fall 2026 games grouped by program and division, with field and
+        location details for every game.
       </p>
 
-      {gamesByField.length > 0 ? (
-        <div className="field-schedules">
-          {gamesByField.map(({ field, games: fieldGames }) => (
-            <div className="field-schedule" key={field}>
-              <h3>{field}</h3>
-              <div className="schedule-table-wrapper">
-                <table>
-                  <thead>
-                    <tr>
-                      <th scope="col">Date</th>
-                      <th scope="col">Time</th>
-                      <th scope="col">Division</th>
-                      <th scope="col">Home Team</th>
-                      <th scope="col">Away Team</th>
-                      <th scope="col">Location</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {fieldGames.map((game) => (
-                      <tr key={game.id}>
-                        <td>{formatDate(game.date)}</td>
-                        <td>{game.start} - {game.end}</td>
-                        <td>{game.rawDivision}</td>
-                        <td>{game.home}</td>
-                        <td>{game.away}</td>
-                        <td>{game.location}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
+      {gamesByProgram.length > 0 ? (
+        <div className="program-schedules">
+          {gamesByProgram.map(({ program, divisions }) => (
+            <section className="program-schedule" key={program}>
+              <h3>{program}</h3>
+              {divisions.map(({ division, games: divisionGames }) => (
+                <div className="division-schedule" key={division}>
+                  <h4>{division.split(" - ").slice(1).join(" - ") || division}</h4>
+                  <div className="schedule-table-wrapper">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th scope="col">Date</th>
+                          <th scope="col">Time</th>
+                          <th scope="col">Home Team</th>
+                          <th scope="col">Away Team</th>
+                          <th scope="col">Location</th>
+                          <th scope="col">Field</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {divisionGames.map((game) => (
+                          <tr key={game.id}>
+                            <td>{formatDate(game.date)}</td>
+                            <td>{game.start} - {game.end}</td>
+                            <td>{game.home}</td>
+                            <td>{game.away}</td>
+                            <td>{game.location}</td>
+                            <td>{game.field}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              ))}
+            </section>
           ))}
         </div>
       ) : (
@@ -82,10 +97,6 @@ export default function GameSchedule({
         </p>
       )}
 
-      <p className="pending-schedule">
-        Additional East and West field game schedules will be added when
-        available.
-      </p>
     </section>
   );
 }
