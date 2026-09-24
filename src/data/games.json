@@ -6,8 +6,8 @@
     "start": "6:00 PM",
     "end": "7:30 PM",
     "division": "Baseball - Minors B",
-    "home": "LP Red Tails - Gomez",
     "away": "LP The Mighty A's - Beltran",
+    "home": "LP Red Tails - Gomez",
     "location": "Las Palmas",
     "field": "East Field",
     "rawDivision": "Minors B"
@@ -19,8 +19,8 @@
     "start": "6:00 PM",
     "end": "7:30 PM",
     "division": "Baseball - Minors B",
-    "home": "LP Heavy Hitters - Covarrubias",
     "away": "LP Thunderbolts - Silva/Dager",
+    "home": "LP Heavy Hitters - Covarrubias",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Minors B"
@@ -32,8 +32,8 @@
     "start": "7:45 PM",
     "end": "9:15 PM",
     "division": "Baseball - Minors A",
-    "home": "LP Red Tails - Gomez",
     "away": "LP Bandits - Munoz/Becerra",
+    "home": "LP Red Tails - Gomez",
     "location": "Las Palmas",
     "field": "East Field",
     "rawDivision": "Minors A"
@@ -45,8 +45,8 @@
     "start": "9:00 AM",
     "end": "11:00 AM",
     "division": "Baseball - Majors",
-    "home": "LP Coyotes - Rodriguez",
     "away": "LP Dirtbags - Ybarra",
+    "home": "LP Coyotes - Rodriguez",
     "location": "Las Palmas",
     "field": "East Field",
     "rawDivision": "Majors"
@@ -58,8 +58,8 @@
     "start": "9:00 AM",
     "end": "10:00 AM",
     "division": "Tee Ball",
-    "home": "LP Pelicans - Michaels/Estavillo",
     "away": "LP Los Coyotes - Silva/Luke",
+    "home": "LP Pelicans - Michaels/Estavillo",
     "location": "Las Palmas",
     "field": "Tee Ball Field",
     "rawDivision": "Tee Ball"
@@ -71,8 +71,8 @@
     "start": "9:00 AM",
     "end": "10:30 AM",
     "division": "Softball - Minors",
-    "home": "LP - ChiquiTrinas - Munoz/Becerra",
     "away": "LP PocoLocas - Cortez",
+    "home": "LP - ChiquiTrinas - Munoz/Becerra",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Minors"
@@ -84,8 +84,8 @@
     "start": "9:00 AM",
     "end": "10:30 AM",
     "division": "Baseball - Minors A",
-    "home": "SDA Minors A",
     "away": "LP Titans - Svehla",
+    "home": "SDA Minors A",
     "location": "SDA",
     "field": "Major Field",
     "rawDivision": "Minors A"
@@ -97,8 +97,8 @@
     "start": "10:15 AM",
     "end": "11:15 AM",
     "division": "Tee Ball",
-    "home": "LP - The Little Legends - J Garcia",
     "away": "LP The Rookies - E Garcia/Sifuentes",
+    "home": "LP - The Little Legends - J Garcia",
     "location": "Las Palmas",
     "field": "Tee Ball Field",
     "rawDivision": "Tee Ball"
@@ -110,8 +110,8 @@
     "start": "10:15 AM",
     "end": "11:45 AM",
     "division": "Baseball - Minors B",
-    "home": "SDA CAPS",
     "away": "LP Strikers - Salas",
+    "home": "SDA CAPS",
     "location": "SDA",
     "field": "T-Ball Field",
     "rawDivision": "Minors B"
@@ -123,8 +123,8 @@
     "start": "11:30 AM",
     "end": "12:30 PM",
     "division": "Tee Ball",
-    "home": "LP Little Rascals - Valadez",
     "away": "LP Las ChiquiPowers - Cortez/Trinidad",
+    "home": "LP Little Rascals - Valadez",
     "location": "Las Palmas",
     "field": "Tee Ball Field",
     "rawDivision": "Tee Ball"
@@ -136,8 +136,8 @@
     "start": "11:45 AM",
     "end": "1:15 PM",
     "division": "Softball - Majors",
-    "home": "LP Diamond Girls - Lugo",
     "away": "SouthBay Diamonds",
+    "home": "LP Diamond Girls - Lugo",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Majors"
@@ -149,8 +149,8 @@
     "start": "2:00 PM",
     "end": "3:30 PM",
     "division": "Softball - Seniors",
-    "home": "SouthBay Storm",
     "away": "LP Fabulosas - Masino",
+    "home": "SouthBay Storm",
     "location": "South Bay",
     "field": "SBLL Field 4",
     "rawDivision": "Seniors"
@@ -162,8 +162,8 @@
     "start": "6:00 PM",
     "end": "7:30 PM",
     "division": "Baseball - Minors B",
-    "home": "LP Heavy Hitters - Covarrubias",
     "away": "LP Red Tails - Gomez",
+    "home": "LP Heavy Hitters - Covarrubias",
     "location": "Las Palmas",
     "field": "East Field",
     "rawDivision": "Minors B"
@@ -175,8 +175,8 @@
     "start": "6:00 PM",
     "end": "7:30 PM",
     "division": "Baseball - Minors B",
-    "home": "LP Thunderbolts - Silva/Dager",
     "away": "LP Strikers - Salas",
+    "home": "LP Thunderbolts - Silva/Dager",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Minors B"
@@ -188,8 +188,8 @@
     "start": "7:45 PM",
     "end": "9:15 PM",
     "division": "Softball - Seniors",
-    "home": "LP Fabulosas - Masino",
     "away": "LP Trinidad",
+    "home": "LP Fabulosas - Masino",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Seniors"
@@ -201,8 +201,8 @@
     "start": "9:00 AM",
     "end": "10:30 AM",
     "division": "Baseball - Minors A",
-    "home": "LP Titans - Svehla",
     "away": "LP Red Tails - Gomez",
+    "home": "LP Titans - Svehla",
     "location": "Las Palmas",
     "field": "East Field",
     "rawDivision": "Minors A"
@@ -214,8 +214,8 @@
     "start": "9:00 AM",
     "end": "10:00 AM",
     "division": "Tee Ball",
-    "home": "LP The Rookies - E Garcia/Sifuentes",
     "away": "LP Pelicans - Michaels/Estavillo",
+    "home": "LP The Rookies - E Garcia/Sifuentes",
     "location": "Las Palmas",
     "field": "Tee Ball Field",
     "rawDivision": "Tee Ball"
@@ -227,8 +227,8 @@
     "start": "9:00 AM",
     "end": "10:30 AM",
     "division": "Baseball - Minors B",
-    "home": "LP The Mighty A's - Beltran",
     "away": "SDA CAPS",
+    "home": "LP The Mighty A's - Beltran",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Minors B"
@@ -240,8 +240,8 @@
     "start": "10:15 AM",
     "end": "11:15 AM",
     "division": "Tee Ball",
-    "home": "LP Los Coyotes - Silva/Luke",
     "away": "LP Little Rascals - Valadez",
+    "home": "LP Los Coyotes - Silva/Luke",
     "location": "Las Palmas",
     "field": "Tee Ball Field",
     "rawDivision": "Tee Ball"
@@ -253,8 +253,8 @@
     "start": "10:45 AM",
     "end": "12:30 PM",
     "division": "Baseball - Majors",
-    "home": "LP Dirtbags - Ybarra",
     "away": "TH Majors",
+    "home": "LP Dirtbags - Ybarra",
     "location": "Las Palmas",
     "field": "East Field",
     "rawDivision": "Majors"
@@ -266,8 +266,8 @@
     "start": "10:45 AM",
     "end": "12:30 PM",
     "division": "Baseball - Majors",
-    "home": "LP Coyotes - Rodriguez",
     "away": "SDA Majors",
+    "home": "LP Coyotes - Rodriguez",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Majors"
@@ -279,8 +279,8 @@
     "start": "11:30 AM",
     "end": "12:30 PM",
     "division": "Tee Ball",
-    "home": "LP Las ChiquiPowers - Cortez/Trinidad",
     "away": "LP - The Little Legends - J Garcia",
+    "home": "LP Las ChiquiPowers - Cortez/Trinidad",
     "location": "Las Palmas",
     "field": "Tee Ball Field",
     "rawDivision": "Tee Ball"
@@ -292,8 +292,8 @@
     "start": "11:30 AM",
     "end": "1:30 PM",
     "division": "Softball - Seniors",
-    "home": "Diablas",
     "away": "LP Fabulosas - Masino",
+    "home": "Diablas",
     "location": "South Bay",
     "field": "SBLL Field 4",
     "rawDivision": "Seniors"
@@ -305,8 +305,8 @@
     "start": "12:00 PM",
     "end": "1:30 PM",
     "division": "Baseball - Minors A",
-    "home": "TH Minors A",
     "away": "LP Bandits - Munoz/Becerra",
+    "home": "TH Minors A",
     "location": "Encanto",
     "field": "Majors Field / Field 1",
     "rawDivision": "Minors A"
@@ -318,8 +318,8 @@
     "start": "1:00 PM",
     "end": "2:30 PM",
     "division": "Softball - Majors",
-    "home": "LP Diamond Girls - Lugo",
     "away": "Gators",
+    "home": "LP Diamond Girls - Lugo",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Majors"
@@ -331,8 +331,8 @@
     "start": "2:00 PM",
     "end": "3:30 PM",
     "division": "Softball - Minors",
-    "home": "LP PocoLocas - Cortez",
     "away": "Sooners",
+    "home": "LP PocoLocas - Cortez",
     "location": "Las Palmas",
     "field": "East Field",
     "rawDivision": "Minors"
@@ -344,8 +344,8 @@
     "start": "6:00 PM",
     "end": "7:30 PM",
     "division": "Baseball - Minors B",
-    "home": "LP The Mighty A's - Beltran",
     "away": "LP Heavy Hitters - Covarrubias",
+    "home": "LP The Mighty A's - Beltran",
     "location": "Las Palmas",
     "field": "East Field",
     "rawDivision": "Minors B"
@@ -357,8 +357,8 @@
     "start": "6:00 PM",
     "end": "7:30 PM",
     "division": "Baseball - Minors B",
-    "home": "LP Thunderbolts - Silva/Dager",
     "away": "LP Red Tails - Gomez",
+    "home": "LP Thunderbolts - Silva/Dager",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Minors B"
@@ -370,8 +370,8 @@
     "start": "7:45 PM",
     "end": "9:15 PM",
     "division": "Softball - Seniors",
-    "home": "LP Trinidad",
     "away": "LP Fabulosas - Masino",
+    "home": "LP Trinidad",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Seniors"
@@ -383,8 +383,8 @@
     "start": "9:00 AM",
     "end": "10:30 AM",
     "division": "Baseball - Minors A",
-    "home": "ENC Padres",
     "away": "LP Red Tails - Gomez",
+    "home": "ENC Padres",
     "location": "Encanto",
     "field": "Majors Field / Field 1",
     "rawDivision": "Minors A"
@@ -396,8 +396,8 @@
     "start": "9:00 AM",
     "end": "10:00 AM",
     "division": "Tee Ball",
-    "home": "LP Pelicans - Michaels/Estavillo",
     "away": "LP Little Rascals - Valadez",
+    "home": "LP Pelicans - Michaels/Estavillo",
     "location": "Las Palmas",
     "field": "Tee Ball Field",
     "rawDivision": "Tee Ball"
@@ -409,8 +409,8 @@
     "start": "9:00 AM",
     "end": "10:30 AM",
     "division": "Softball - Seniors",
-    "home": "Shooting Stars",
     "away": "LP Trinidad",
+    "home": "Shooting Stars",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Seniors"
@@ -422,8 +422,8 @@
     "start": "9:00 AM",
     "end": "11:00 AM",
     "division": "Baseball - Majors",
-    "home": "SC Majors",
     "away": "LP Coyotes - Rodriguez",
+    "home": "SC Majors",
     "location": "Southcrest",
     "field": "Major Field",
     "rawDivision": "Majors"
@@ -435,8 +435,8 @@
     "start": "10:15 AM",
     "end": "11:15 AM",
     "division": "Tee Ball",
-    "home": "LP - The Little Legends - J Garcia",
     "away": "LP The Rookies - E Garcia/Sifuentes",
+    "home": "LP - The Little Legends - J Garcia",
     "location": "Las Palmas",
     "field": "Tee Ball Field",
     "rawDivision": "Tee Ball"
@@ -448,8 +448,8 @@
     "start": "10:15 AM",
     "end": "11:45 AM",
     "division": "Baseball - Minors B",
-    "home": "SDA CAPS",
     "away": "LP Strikers - Salas",
+    "home": "SDA CAPS",
     "location": "SDA",
     "field": "T-Ball Field",
     "rawDivision": "Minors B"
@@ -461,8 +461,8 @@
     "start": "10:15 AM",
     "end": "11:45 AM",
     "division": "Baseball - Minors A",
-    "home": "SC Minors A",
     "away": "LP Bandits - Munoz/Becerra",
+    "home": "SC Minors A",
     "location": "Southcrest",
     "field": "Minors Field",
     "rawDivision": "Minors A"
@@ -474,8 +474,8 @@
     "start": "10:45 AM",
     "end": "12:45 PM",
     "division": "Baseball - Majors",
-    "home": "SDA Majors",
     "away": "LP Dirtbags - Ybarra",
+    "home": "SDA Majors",
     "location": "SDA",
     "field": "Major Field",
     "rawDivision": "Majors"
@@ -487,8 +487,8 @@
     "start": "11:30 AM",
     "end": "12:30 PM",
     "division": "Tee Ball",
-    "home": "LP Los Coyotes - Silva/Luke",
     "away": "LP Las ChiquiPowers - Cortez/Trinidad",
+    "home": "LP Los Coyotes - Silva/Luke",
     "location": "Las Palmas",
     "field": "Tee Ball Field",
     "rawDivision": "Tee Ball"
@@ -500,8 +500,8 @@
     "start": "11:30 AM",
     "end": "1:30 PM",
     "division": "Softball - Majors",
-    "home": "LP Diamond Girls - Lugo",
     "away": "Vipers",
+    "home": "LP Diamond Girls - Lugo",
     "location": "South Bay",
     "field": "SBLL Field 2",
     "rawDivision": "Majors"
@@ -513,8 +513,8 @@
     "start": "12:00 PM",
     "end": "1:30 PM",
     "division": "Baseball - Minors A",
-    "home": "TH Minors A",
     "away": "LP Titans - Svehla",
+    "home": "TH Minors A",
     "location": "Encanto",
     "field": "Majors Field / Field 1",
     "rawDivision": "Minors A"
@@ -526,8 +526,8 @@
     "start": "12:45 PM",
     "end": "2:15 PM",
     "division": "Softball - Minors",
-    "home": "LP PocoLocas - Cortez",
     "away": "Lions",
+    "home": "LP PocoLocas - Cortez",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Minors"
@@ -539,8 +539,8 @@
     "start": "6:00 PM",
     "end": "7:30 PM",
     "division": "Baseball - Minors B",
-    "home": "LP Thunderbolts - Silva/Dager",
     "away": "LP The Mighty A's - Beltran",
+    "home": "LP Thunderbolts - Silva/Dager",
     "location": "Las Palmas",
     "field": "East Field",
     "rawDivision": "Minors B"
@@ -552,8 +552,8 @@
     "start": "6:00 PM",
     "end": "7:30 PM",
     "division": "Baseball - Minors B",
-    "home": "LP Strikers - Salas",
     "away": "LP Heavy Hitters - Covarrubias",
+    "home": "LP Strikers - Salas",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Minors B"
@@ -565,8 +565,8 @@
     "start": "7:45 PM",
     "end": "9:15 PM",
     "division": "Softball - Seniors",
-    "home": "LP Fabulosas - Masino",
     "away": "LP Trinidad",
+    "home": "LP Fabulosas - Masino",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Seniors"
@@ -578,8 +578,8 @@
     "start": "9:00 AM",
     "end": "10:30 AM",
     "division": "Baseball - Minors A",
-    "home": "LP Bandits - Munoz/Becerra",
     "away": "ENC Grays",
+    "home": "LP Bandits - Munoz/Becerra",
     "location": "Las Palmas",
     "field": "East Field",
     "rawDivision": "Minors A"
@@ -591,8 +591,8 @@
     "start": "9:00 AM",
     "end": "10:00 AM",
     "division": "Tee Ball",
-    "home": "LP - The Little Legends - J Garcia",
     "away": "LP Pelicans - Michaels/Estavillo",
+    "home": "LP - The Little Legends - J Garcia",
     "location": "Las Palmas",
     "field": "Tee Ball Field",
     "rawDivision": "Tee Ball"
@@ -604,8 +604,8 @@
     "start": "9:00 AM",
     "end": "10:30 AM",
     "division": "Baseball - Minors B",
-    "home": "LP Red Tails - Gomez",
     "away": "SDA CAPS",
+    "home": "LP Red Tails - Gomez",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Minors B"
@@ -617,8 +617,8 @@
     "start": "9:00 AM",
     "end": "11:00 AM",
     "division": "Softball - Minors",
-    "home": "LP PocoLocas - Cortez",
     "away": "Vipers",
+    "home": "LP PocoLocas - Cortez",
     "location": "South Bay",
     "field": "SBLL Field 2",
     "rawDivision": "Minors"
@@ -630,8 +630,8 @@
     "start": "9:00 AM",
     "end": "11:00 AM",
     "division": "Baseball - Majors",
-    "home": "SC Majors",
     "away": "LP Dirtbags - Ybarra",
+    "home": "SC Majors",
     "location": "Southcrest",
     "field": "Major Field",
     "rawDivision": "Majors"
@@ -643,8 +643,8 @@
     "start": "10:15 AM",
     "end": "11:15 AM",
     "division": "Tee Ball",
-    "home": "LP Little Rascals - Valadez",
     "away": "LP Las ChiquiPowers - Cortez/Trinidad",
+    "home": "LP Little Rascals - Valadez",
     "location": "Las Palmas",
     "field": "Tee Ball Field",
     "rawDivision": "Tee Ball"
@@ -656,8 +656,8 @@
     "start": "10:45 AM",
     "end": "12:15 PM",
     "division": "Baseball - Minors A",
-    "home": "LP Red Tails - Gomez",
     "away": "SDA Minors A",
+    "home": "LP Red Tails - Gomez",
     "location": "Las Palmas",
     "field": "East Field",
     "rawDivision": "Minors A"
@@ -669,8 +669,8 @@
     "start": "10:45 AM",
     "end": "12:15 PM",
     "division": "Softball - Seniors",
-    "home": "Storm",
     "away": "LP Fabulosas - Masino",
+    "home": "Storm",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Seniors"
@@ -682,8 +682,8 @@
     "start": "10:45 AM",
     "end": "12:15 PM",
     "division": "Baseball - Minors A",
-    "home": "SC Minors A",
     "away": "LP Titans - Svehla",
+    "home": "SC Minors A",
     "location": "Southcrest",
     "field": "Minors Field",
     "rawDivision": "Minors A"
@@ -695,8 +695,8 @@
     "start": "11:30 AM",
     "end": "12:30 PM",
     "division": "Tee Ball",
-    "home": "LP The Rookies - E Garcia/Sifuentes",
     "away": "LP Los Coyotes - Silva/Luke",
+    "home": "LP The Rookies - E Garcia/Sifuentes",
     "location": "Las Palmas",
     "field": "Tee Ball Field",
     "rawDivision": "Tee Ball"
@@ -708,8 +708,8 @@
     "start": "11:30 AM",
     "end": "1:30 PM",
     "division": "Softball - Majors",
-    "home": "LP Diamond Girls - Lugo",
     "away": "Cherry Bombs",
+    "home": "LP Diamond Girls - Lugo",
     "location": "South Bay",
     "field": "SBLL Field 4",
     "rawDivision": "Majors"
@@ -721,8 +721,8 @@
     "start": "12:30 PM",
     "end": "2:00 PM",
     "division": "Softball - Minors",
-    "home": "LP - ChiquiTrinas - Munoz/Becerra",
     "away": "Sooners",
+    "home": "LP - ChiquiTrinas - Munoz/Becerra",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Minors"
@@ -734,8 +734,8 @@
     "start": "6:00 PM",
     "end": "7:30 PM",
     "division": "Baseball - Minors B",
-    "home": "LP Strikers - Salas",
     "away": "LP Thunderbolts - Silva/Dager",
+    "home": "LP Strikers - Salas",
     "location": "Las Palmas",
     "field": "East Field",
     "rawDivision": "Minors B"
@@ -747,8 +747,8 @@
     "start": "6:00 PM",
     "end": "7:30 PM",
     "division": "Baseball - Minors B",
-    "home": "LP Red Tails - Gomez",
     "away": "LP The Mighty A's - Beltran",
+    "home": "LP Red Tails - Gomez",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Minors B"
@@ -760,8 +760,8 @@
     "start": "7:45 PM",
     "end": "9:15 PM",
     "division": "Softball - Seniors",
-    "home": "LP Trinidad",
     "away": "LP Fabulosas - Masino",
+    "home": "LP Trinidad",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Seniors"
@@ -773,8 +773,8 @@
     "start": "9:00 AM",
     "end": "10:30 AM",
     "division": "Baseball - Minors A",
-    "home": "LP Red Tails - Gomez",
     "away": "ENC Grays",
+    "home": "LP Red Tails - Gomez",
     "location": "Las Palmas",
     "field": "East Field",
     "rawDivision": "Minors A"
@@ -786,8 +786,8 @@
     "start": "9:00 AM",
     "end": "10:00 AM",
     "division": "Tee Ball",
-    "home": "LP Pelicans - Michaels/Estavillo",
     "away": "LP Las ChiquiPowers - Cortez/Trinidad",
+    "home": "LP Pelicans - Michaels/Estavillo",
     "location": "Las Palmas",
     "field": "Tee Ball Field",
     "rawDivision": "Tee Ball"
@@ -799,8 +799,8 @@
     "start": "9:00 AM",
     "end": "10:30 AM",
     "division": "Baseball - Minors A",
-    "home": "LP Bandits - Munoz/Becerra",
     "away": "LP Titans - Svehla",
+    "home": "LP Bandits - Munoz/Becerra",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Minors A"
@@ -812,8 +812,8 @@
     "start": "9:00 AM",
     "end": "11:00 AM",
     "division": "Softball - Minors",
-    "home": "LP PocoLocas - Cortez",
     "away": "Lions",
+    "home": "LP PocoLocas - Cortez",
     "location": "South Bay",
     "field": "SBLL Field 4",
     "rawDivision": "Minors"
@@ -825,8 +825,8 @@
     "start": "10:15 AM",
     "end": "11:15 AM",
     "division": "Tee Ball",
-    "home": "LP Los Coyotes - Silva/Luke",
     "away": "LP - The Little Legends - J Garcia",
+    "home": "LP Los Coyotes - Silva/Luke",
     "location": "Las Palmas",
     "field": "Tee Ball Field",
     "rawDivision": "Tee Ball"
@@ -838,8 +838,8 @@
     "start": "10:15 AM",
     "end": "11:45 AM",
     "division": "Baseball - Minors B",
-    "home": "SDA CAPS",
     "away": "LP Heavy Hitters - Covarrubias",
+    "home": "SDA CAPS",
     "location": "SDA",
     "field": "T-Ball Field",
     "rawDivision": "Minors B"
@@ -851,8 +851,8 @@
     "start": "10:45 AM",
     "end": "12:15 PM",
     "division": "Softball - Seniors",
-    "home": "Diablas",
     "away": "LP Trinidad",
+    "home": "Diablas",
     "location": "Las Palmas",
     "field": "East Field",
     "rawDivision": "Seniors"
@@ -864,8 +864,8 @@
     "start": "10:45 AM",
     "end": "12:15 PM",
     "division": "Softball - Minors",
-    "home": "LP - ChiquiTrinas - Munoz/Becerra",
     "away": "Rebels",
+    "home": "LP - ChiquiTrinas - Munoz/Becerra",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Minors"
@@ -877,8 +877,8 @@
     "start": "11:30 AM",
     "end": "12:30 PM",
     "division": "Tee Ball",
-    "home": "LP Little Rascals - Valadez",
     "away": "LP The Rookies - E Garcia/Sifuentes",
+    "home": "LP Little Rascals - Valadez",
     "location": "Las Palmas",
     "field": "Tee Ball Field",
     "rawDivision": "Tee Ball"
@@ -890,8 +890,8 @@
     "start": "1:45 PM",
     "end": "3:45 PM",
     "division": "Baseball - Majors",
-    "home": "TH Majors",
     "away": "LP Coyotes - Rodriguez",
+    "home": "TH Majors",
     "location": "Encanto",
     "field": "Majors Field / Field 1",
     "rawDivision": "Majors"
@@ -903,8 +903,8 @@
     "start": "2:00 PM",
     "end": "4:00 PM",
     "division": "Softball - Majors",
-    "home": "LP Diamond Girls - Lugo",
     "away": "Lady Savages",
+    "home": "LP Diamond Girls - Lugo",
     "location": "South Bay",
     "field": "SBLL Field 3",
     "rawDivision": "Majors"
@@ -916,8 +916,8 @@
     "start": "6:00 PM",
     "end": "7:30 PM",
     "division": "Baseball - Minors B",
-    "home": "LP Strikers - Salas",
     "away": "LP Red Tails - Gomez",
+    "home": "LP Strikers - Salas",
     "location": "Las Palmas",
     "field": "East Field",
     "rawDivision": "Minors B"
@@ -929,8 +929,8 @@
     "start": "6:00 PM",
     "end": "7:30 PM",
     "division": "Baseball - Minors B",
-    "home": "LP Thunderbolts - Silva/Dager",
     "away": "LP Heavy Hitters - Covarrubias",
+    "home": "LP Thunderbolts - Silva/Dager",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Minors B"
@@ -942,8 +942,8 @@
     "start": "7:45 PM",
     "end": "9:15 PM",
     "division": "Softball - Seniors",
-    "home": "LP Fabulosas - Masino",
     "away": "LP Trinidad",
+    "home": "LP Fabulosas - Masino",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Seniors"
@@ -955,8 +955,8 @@
     "start": "9:00 AM",
     "end": "10:30 AM",
     "division": "Baseball - Minors A",
-    "home": "ENC Grays",
     "away": "LP Titans - Svehla",
+    "home": "ENC Grays",
     "location": "Encanto",
     "field": "Majors Field / Field 1",
     "rawDivision": "Minors A"
@@ -968,8 +968,8 @@
     "start": "9:00 AM",
     "end": "10:30 AM",
     "division": "Baseball - Minors A",
-    "home": "LP Bandits - Munoz/Becerra",
     "away": "ENC Padres",
+    "home": "LP Bandits - Munoz/Becerra",
     "location": "Las Palmas",
     "field": "East Field",
     "rawDivision": "Minors A"
@@ -981,8 +981,8 @@
     "start": "9:00 AM",
     "end": "10:00 AM",
     "division": "Tee Ball",
-    "home": "LP Los Coyotes - Silva/Luke",
     "away": "LP Pelicans - Michaels/Estavillo",
+    "home": "LP Los Coyotes - Silva/Luke",
     "location": "Las Palmas",
     "field": "Tee Ball Field",
     "rawDivision": "Tee Ball"
@@ -994,8 +994,8 @@
     "start": "9:00 AM",
     "end": "10:30 AM",
     "division": "Baseball - Minors B",
-    "home": "LP The Mighty A's - Beltran",
     "away": "SDA CAPS",
+    "home": "LP The Mighty A's - Beltran",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Minors B"
@@ -1007,8 +1007,8 @@
     "start": "9:00 AM",
     "end": "11:00 AM",
     "division": "Softball - Minors",
-    "home": "LP PocoLocas - Cortez",
     "away": "Sooners",
+    "home": "LP PocoLocas - Cortez",
     "location": "South Bay",
     "field": "SBLL Field 4",
     "rawDivision": "Minors"
@@ -1020,8 +1020,8 @@
     "start": "10:15 AM",
     "end": "11:15 AM",
     "division": "Tee Ball",
-    "home": "LP Las ChiquiPowers - Cortez/Trinidad",
     "away": "LP The Rookies - E Garcia/Sifuentes",
+    "home": "LP Las ChiquiPowers - Cortez/Trinidad",
     "location": "Las Palmas",
     "field": "Tee Ball Field",
     "rawDivision": "Tee Ball"
@@ -1033,8 +1033,8 @@
     "start": "10:45 AM",
     "end": "12:30 PM",
     "division": "Baseball - Majors",
-    "home": "LP Dirtbags - Ybarra",
     "away": "LP Coyotes - Rodriguez",
+    "home": "LP Dirtbags - Ybarra",
     "location": "Las Palmas",
     "field": "East Field",
     "rawDivision": "Majors"
@@ -1046,8 +1046,8 @@
     "start": "10:45 AM",
     "end": "12:15 PM",
     "division": "Baseball - Minors A",
-    "home": "LP Red Tails - Gomez",
     "away": "TH Minors A",
+    "home": "LP Red Tails - Gomez",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Minors A"
@@ -1059,8 +1059,8 @@
     "start": "11:30 AM",
     "end": "12:30 PM",
     "division": "Tee Ball",
-    "home": "LP Little Rascals - Valadez",
     "away": "LP - The Little Legends - J Garcia",
+    "home": "LP Little Rascals - Valadez",
     "location": "Las Palmas",
     "field": "Tee Ball Field",
     "rawDivision": "Tee Ball"
@@ -1072,8 +1072,8 @@
     "start": "11:30 AM",
     "end": "1:30 PM",
     "division": "Softball - Majors",
-    "home": "LP Diamond Girls - Lugo",
     "away": "Supreme",
+    "home": "LP Diamond Girls - Lugo",
     "location": "South Bay",
     "field": "SBLL Field 2",
     "rawDivision": "Majors"
@@ -1085,8 +1085,8 @@
     "start": "12:30 PM",
     "end": "2:00 PM",
     "division": "Softball - Minors",
-    "home": "LP - ChiquiTrinas - Munoz/Becerra",
     "away": "Rebels",
+    "home": "LP - ChiquiTrinas - Munoz/Becerra",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Minors"
@@ -1098,8 +1098,8 @@
     "start": "12:45 PM",
     "end": "2:15 PM",
     "division": "Softball - Seniors",
-    "home": "Shooting Stars",
     "away": "LP Fabulosas - Masino",
+    "home": "Shooting Stars",
     "location": "Las Palmas",
     "field": "East Field",
     "rawDivision": "Seniors"
@@ -1111,8 +1111,8 @@
     "start": "6:00 PM",
     "end": "7:30 PM",
     "division": "Baseball - Minors B",
-    "home": "LP Red Tails - Gomez",
     "away": "LP Heavy Hitters - Covarrubias",
+    "home": "LP Red Tails - Gomez",
     "location": "Las Palmas",
     "field": "East Field",
     "rawDivision": "Minors B"
@@ -1124,8 +1124,8 @@
     "start": "6:00 PM",
     "end": "7:30 PM",
     "division": "Baseball - Minors B",
-    "home": "LP Strikers - Salas",
     "away": "LP The Mighty A's - Beltran",
+    "home": "LP Strikers - Salas",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Minors B"
@@ -1137,8 +1137,8 @@
     "start": "7:45 PM",
     "end": "9:15 PM",
     "division": "Softball - Seniors",
-    "home": "LP Trinidad",
     "away": "LP Fabulosas - Masino",
+    "home": "LP Trinidad",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Seniors"
@@ -1150,8 +1150,8 @@
     "start": "9:00 AM",
     "end": "10:30 AM",
     "division": "Baseball - Minors A",
-    "home": "LP Titans - Svehla",
     "away": "ENC Padres",
+    "home": "LP Titans - Svehla",
     "location": "Las Palmas",
     "field": "East Field",
     "rawDivision": "Minors A"
@@ -1163,8 +1163,8 @@
     "start": "9:00 AM",
     "end": "10:00 AM",
     "division": "Tee Ball",
-    "home": "LP Pelicans - Michaels/Estavillo",
     "away": "LP The Rookies - E Garcia/Sifuentes",
+    "home": "LP Pelicans - Michaels/Estavillo",
     "location": "Las Palmas",
     "field": "Tee Ball Field",
     "rawDivision": "Tee Ball"
@@ -1176,8 +1176,8 @@
     "start": "9:00 AM",
     "end": "10:30 AM",
     "division": "Baseball - Minors A",
-    "home": "LP Bandits - Munoz/Becerra",
     "away": "SDA Minors A",
+    "home": "LP Bandits - Munoz/Becerra",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Minors A"
@@ -1189,8 +1189,8 @@
     "start": "9:00 AM",
     "end": "11:00 AM",
     "division": "Baseball - Majors",
-    "home": "SDA Majors",
     "away": "LP Coyotes - Rodriguez",
+    "home": "SDA Majors",
     "location": "SDA",
     "field": "Major Field",
     "rawDivision": "Majors"
@@ -1202,8 +1202,8 @@
     "start": "10:15 AM",
     "end": "11:15 AM",
     "division": "Tee Ball",
-    "home": "LP Little Rascals - Valadez",
     "away": "LP Los Coyotes - Silva/Luke",
+    "home": "LP Little Rascals - Valadez",
     "location": "Las Palmas",
     "field": "Tee Ball Field",
     "rawDivision": "Tee Ball"
@@ -1215,8 +1215,8 @@
     "start": "10:15 AM",
     "end": "11:45 AM",
     "division": "Baseball - Minors B",
-    "home": "SDA CAPS",
     "away": "LP Thunderbolts - Silva/Dager",
+    "home": "SDA CAPS",
     "location": "SDA",
     "field": "T-Ball Field",
     "rawDivision": "Minors B"
@@ -1228,8 +1228,8 @@
     "start": "10:45 AM",
     "end": "12:15 PM",
     "division": "Baseball - Minors A",
-    "home": "LP Red Tails - Gomez",
     "away": "SC Minors A",
+    "home": "LP Red Tails - Gomez",
     "location": "Las Palmas",
     "field": "East Field",
     "rawDivision": "Minors A"
@@ -1241,8 +1241,8 @@
     "start": "10:45 AM",
     "end": "12:30 PM",
     "division": "Baseball - Majors",
-    "home": "LP Dirtbags - Ybarra",
     "away": "TH Majors",
+    "home": "LP Dirtbags - Ybarra",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Majors"
@@ -1254,8 +1254,8 @@
     "start": "11:30 AM",
     "end": "12:30 PM",
     "division": "Tee Ball",
-    "home": "LP - The Little Legends - J Garcia",
     "away": "LP Las ChiquiPowers - Cortez/Trinidad",
+    "home": "LP - The Little Legends - J Garcia",
     "location": "Las Palmas",
     "field": "Tee Ball Field",
     "rawDivision": "Tee Ball"
@@ -1267,8 +1267,8 @@
     "start": "11:30 AM",
     "end": "1:30 PM",
     "division": "Softball - Majors",
-    "home": "LP Diamond Girls - Lugo",
     "away": "Cherry Bombs",
+    "home": "LP Diamond Girls - Lugo",
     "location": "South Bay",
     "field": "SBLL Field 4",
     "rawDivision": "Majors"
@@ -1279,12 +1279,12 @@
     "day": "Saturday",
     "start": "12:45 PM",
     "end": "2:15 PM",
-    "division": "Softball - Majors",
-    "home": "Las Palmas Team 2",
-    "away": "Las Palmas Team 3",
+    "division": "Softball - Minors",
+    "away": "LP PocoLocas - Cortez",
+    "home": "LP - ChiquiTrinas - Munoz/Becerra",
     "location": "Las Palmas",
     "field": "East Field",
-    "rawDivision": "Majors"
+    "rawDivision": "Minors"
   },
   {
     "id": "softball-2026-10-31-tbd-1",
@@ -1293,8 +1293,8 @@
     "start": "12:45 PM",
     "end": "2:15 PM",
     "division": "Softball - Seniors",
-    "home": "Storm",
     "away": "LP Trinidad",
+    "home": "Storm",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Seniors"
@@ -1306,8 +1306,8 @@
     "start": "6:00 PM",
     "end": "7:30 PM",
     "division": "Baseball - Minors B",
-    "home": "LP Heavy Hitters - Covarrubias",
     "away": "LP The Mighty A's - Beltran",
+    "home": "LP Heavy Hitters - Covarrubias",
     "location": "Las Palmas",
     "field": "East Field",
     "rawDivision": "Minors B"
@@ -1319,8 +1319,8 @@
     "start": "6:00 PM",
     "end": "7:30 PM",
     "division": "Baseball - Minors B",
-    "home": "LP Red Tails - Gomez",
     "away": "LP Thunderbolts - Silva/Dager",
+    "home": "LP Red Tails - Gomez",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Minors B"
@@ -1332,8 +1332,8 @@
     "start": "7:45 PM",
     "end": "9:15 PM",
     "division": "Baseball - Minors A",
-    "home": "LP Bandits - Munoz/Becerra",
     "away": "LP Red Tails - Gomez",
+    "home": "LP Bandits - Munoz/Becerra",
     "location": "Las Palmas",
     "field": "East Field",
     "rawDivision": "Minors A"
@@ -1345,8 +1345,8 @@
     "start": "7:45 PM",
     "end": "9:15 PM",
     "division": "Softball - Seniors",
-    "home": "LP Fabulosas - Masino",
     "away": "LP Trinidad",
+    "home": "LP Fabulosas - Masino",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Seniors"
@@ -1358,8 +1358,8 @@
     "start": "9:00 AM",
     "end": "10:30 AM",
     "division": "Baseball - Minors A",
-    "home": "LP Titans - Svehla",
     "away": "SDA Minors A",
+    "home": "LP Titans - Svehla",
     "location": "Las Palmas",
     "field": "East Field",
     "rawDivision": "Minors A"
@@ -1371,8 +1371,8 @@
     "start": "9:00 AM",
     "end": "10:00 AM",
     "division": "Tee Ball",
-    "home": "LP Little Rascals - Valadez",
     "away": "LP Pelicans - Michaels/Estavillo",
+    "home": "LP Little Rascals - Valadez",
     "location": "Las Palmas",
     "field": "Tee Ball Field",
     "rawDivision": "Tee Ball"
@@ -1384,8 +1384,8 @@
     "start": "9:00 AM",
     "end": "10:30 AM",
     "division": "Baseball - Minors B",
-    "home": "LP Strikers - Salas",
     "away": "SDA CAPS",
+    "home": "LP Strikers - Salas",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Minors B"
@@ -1397,8 +1397,8 @@
     "start": "9:00 AM",
     "end": "11:00 AM",
     "division": "Softball - Minors",
-    "home": "LP - ChiquiTrinas - Munoz/Becerra",
     "away": "Rebels",
+    "home": "LP - ChiquiTrinas - Munoz/Becerra",
     "location": "South Bay",
     "field": "SBLL Field 4",
     "rawDivision": "Minors"
@@ -1410,8 +1410,8 @@
     "start": "10:15 AM",
     "end": "11:15 AM",
     "division": "Tee Ball",
-    "home": "LP The Rookies - E Garcia/Sifuentes",
     "away": "LP - The Little Legends - J Garcia",
+    "home": "LP The Rookies - E Garcia/Sifuentes",
     "location": "Las Palmas",
     "field": "Tee Ball Field",
     "rawDivision": "Tee Ball"
@@ -1423,8 +1423,8 @@
     "start": "10:45 AM",
     "end": "12:30 PM",
     "division": "Baseball - Majors",
-    "home": "LP Coyotes - Rodriguez",
     "away": "SC Majors",
+    "home": "LP Coyotes - Rodriguez",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Majors"
@@ -1436,8 +1436,8 @@
     "start": "11:30 AM",
     "end": "12:30 PM",
     "division": "Tee Ball",
-    "home": "LP Las ChiquiPowers - Cortez/Trinidad",
     "away": "LP Los Coyotes - Silva/Luke",
+    "home": "LP Las ChiquiPowers - Cortez/Trinidad",
     "location": "Las Palmas",
     "field": "Tee Ball Field",
     "rawDivision": "Tee Ball"
@@ -1449,8 +1449,8 @@
     "start": "12:30 PM",
     "end": "2:15 PM",
     "division": "Baseball - Majors",
-    "home": "LP Dirtbags - Ybarra",
     "away": "SDA Majors",
+    "home": "LP Dirtbags - Ybarra",
     "location": "Las Palmas",
     "field": "East Field",
     "rawDivision": "Majors"
@@ -1462,8 +1462,8 @@
     "start": "12:45 PM",
     "end": "2:15 PM",
     "division": "Softball - Minors",
-    "home": "LP PocoLocas - Cortez",
     "away": "Sooners",
+    "home": "LP PocoLocas - Cortez",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Minors"
@@ -1475,8 +1475,8 @@
     "start": "2:00 PM",
     "end": "4:00 PM",
     "division": "Softball - Majors",
-    "home": "LP Diamond Girls - Lugo",
     "away": "SB Royalty",
+    "home": "LP Diamond Girls - Lugo",
     "location": "South Bay",
     "field": "SBLL Field 3",
     "rawDivision": "Majors"
@@ -1488,8 +1488,8 @@
     "start": "2:30 PM",
     "end": "4:00 PM",
     "division": "Softball - Seniors",
-    "home": "Diablas",
     "away": "LP Fabulosas - Masino",
+    "home": "Diablas",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Seniors"
@@ -1501,8 +1501,8 @@
     "start": "6:00 PM",
     "end": "7:30 PM",
     "division": "Baseball - Minors B",
-    "home": "LP The Mighty A's - Beltran",
     "away": "LP Thunderbolts - Silva/Dager",
+    "home": "LP The Mighty A's - Beltran",
     "location": "Las Palmas",
     "field": "East Field",
     "rawDivision": "Minors B"
@@ -1514,8 +1514,8 @@
     "start": "6:00 PM",
     "end": "7:30 PM",
     "division": "Baseball - Minors B",
-    "home": "LP Heavy Hitters - Covarrubias",
     "away": "LP Strikers - Salas",
+    "home": "LP Heavy Hitters - Covarrubias",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Minors B"
@@ -1527,8 +1527,8 @@
     "start": "7:45 PM",
     "end": "9:15 PM",
     "division": "Softball - Seniors",
-    "home": "LP Trinidad",
     "away": "LP Fabulosas - Masino",
+    "home": "LP Trinidad",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Seniors"
@@ -1537,11 +1537,11 @@
     "id": "softball-2026-11-14-tbd-1",
     "date": "2026-11-14",
     "day": "Saturday",
-    "start": "8:30 AM",
-    "end": "10:00 AM",
+    "start": "9:00 AM",
+    "end": "10:30 AM",
     "division": "Softball - Minors",
-    "home": "LP - ChiquiTrinas - Munoz/Becerra",
     "away": "LP PocoLocas - Cortez",
+    "home": "LP - ChiquiTrinas - Munoz/Becerra",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Minors"
@@ -1553,8 +1553,8 @@
     "start": "9:00 AM",
     "end": "10:30 AM",
     "division": "Baseball - Minors A",
-    "home": "LP Red Tails - Gomez",
     "away": "LP Titans - Svehla",
+    "home": "LP Red Tails - Gomez",
     "location": "Las Palmas",
     "field": "East Field",
     "rawDivision": "Minors A"
@@ -1566,8 +1566,8 @@
     "start": "9:00 AM",
     "end": "10:00 AM",
     "division": "Tee Ball",
-    "home": "LP Pelicans - Michaels/Estavillo",
     "away": "LP - The Little Legends - J Garcia",
+    "home": "LP Pelicans - Michaels/Estavillo",
     "location": "Las Palmas",
     "field": "Tee Ball Field",
     "rawDivision": "Tee Ball"
@@ -1579,8 +1579,8 @@
     "start": "9:00 AM",
     "end": "11:00 AM",
     "division": "Baseball - Majors",
-    "home": "SC Majors",
     "away": "LP Dirtbags - Ybarra",
+    "home": "SC Majors",
     "location": "Southcrest",
     "field": "Major Field",
     "rawDivision": "Majors"
@@ -1592,8 +1592,8 @@
     "start": "10:15 AM",
     "end": "11:15 AM",
     "division": "Tee Ball",
-    "home": "LP Las ChiquiPowers - Cortez/Trinidad",
     "away": "LP Little Rascals - Valadez",
+    "home": "LP Las ChiquiPowers - Cortez/Trinidad",
     "location": "Las Palmas",
     "field": "Tee Ball Field",
     "rawDivision": "Tee Ball"
@@ -1605,8 +1605,8 @@
     "start": "11:30 AM",
     "end": "12:30 PM",
     "division": "Tee Ball",
-    "home": "LP Los Coyotes - Silva/Luke",
     "away": "LP The Rookies - E Garcia/Sifuentes",
+    "home": "LP Los Coyotes - Silva/Luke",
     "location": "Las Palmas",
     "field": "Tee Ball Field",
     "rawDivision": "Tee Ball"
@@ -1618,8 +1618,8 @@
     "start": "11:30 AM",
     "end": "1:30 PM",
     "division": "Softball - Majors",
-    "home": "LP Diamond Girls - Lugo",
     "away": "Gators",
+    "home": "LP Diamond Girls - Lugo",
     "location": "South Bay",
     "field": "SBLL Field 2",
     "rawDivision": "Majors"
@@ -1631,8 +1631,8 @@
     "start": "12:00 PM",
     "end": "1:30 PM",
     "division": "Baseball - Minors A",
-    "home": "TH Minors A",
     "away": "LP Bandits - Munoz/Becerra",
+    "home": "TH Minors A",
     "location": "Encanto",
     "field": "Majors Field / Field 1",
     "rawDivision": "Minors A"
@@ -1644,8 +1644,8 @@
     "start": "12:00 PM",
     "end": "1:30 PM",
     "division": "Baseball - Minors B",
-    "home": "SDA CAPS",
     "away": "LP Red Tails - Gomez",
+    "home": "SDA CAPS",
     "location": "SDA",
     "field": "T-Ball Field",
     "rawDivision": "Minors B"
@@ -1656,12 +1656,12 @@
     "day": "Saturday",
     "start": "2:00 PM",
     "end": "3:30 PM",
-    "division": "Softball - Majors",
+    "division": "Softball - Seniors",
+    "away": "LP Trinidad",
     "home": "Storm",
-    "away": "LP Diamond Girls - Lugo",
     "location": "Las Palmas",
     "field": "East Field",
-    "rawDivision": "Majors"
+    "rawDivision": "Seniors"
   },
   {
     "id": "interleague-64",
@@ -1670,8 +1670,8 @@
     "start": "6:00 PM",
     "end": "7:30 PM",
     "division": "Baseball - Minors B",
-    "home": "LP Thunderbolts - Silva/Dager",
     "away": "LP Strikers - Salas",
+    "home": "LP Thunderbolts - Silva/Dager",
     "location": "Las Palmas",
     "field": "East Field",
     "rawDivision": "Minors B"
@@ -1683,8 +1683,8 @@
     "start": "6:00 PM",
     "end": "7:30 PM",
     "division": "Baseball - Minors B",
-    "home": "LP The Mighty A's - Beltran",
     "away": "LP Red Tails - Gomez",
+    "home": "LP The Mighty A's - Beltran",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Minors B"
@@ -1696,8 +1696,8 @@
     "start": "7:45 PM",
     "end": "9:15 PM",
     "division": "Softball - Seniors",
-    "home": "LP Fabulosas - Masino",
     "away": "LP Trinidad",
+    "home": "LP Fabulosas - Masino",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Seniors"
@@ -1709,8 +1709,8 @@
     "start": "9:00 AM",
     "end": "10:30 AM",
     "division": "Baseball - Minors A",
-    "home": "LP Red Tails - Gomez",
     "away": "ENC Padres",
+    "home": "LP Red Tails - Gomez",
     "location": "Las Palmas",
     "field": "East Field",
     "rawDivision": "Minors A"
@@ -1722,8 +1722,8 @@
     "start": "9:00 AM",
     "end": "10:00 AM",
     "division": "Tee Ball",
-    "home": "LP Las ChiquiPowers - Cortez/Trinidad",
     "away": "LP Pelicans - Michaels/Estavillo",
+    "home": "LP Las ChiquiPowers - Cortez/Trinidad",
     "location": "Las Palmas",
     "field": "Tee Ball Field",
     "rawDivision": "Tee Ball"
@@ -1735,8 +1735,8 @@
     "start": "9:00 AM",
     "end": "10:30 AM",
     "division": "Baseball - Minors B",
-    "home": "LP Heavy Hitters - Covarrubias",
     "away": "SDA CAPS",
+    "home": "LP Heavy Hitters - Covarrubias",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Minors B"
@@ -1748,8 +1748,8 @@
     "start": "10:15 AM",
     "end": "11:15 AM",
     "division": "Tee Ball",
-    "home": "LP - The Little Legends - J Garcia",
     "away": "LP Los Coyotes - Silva/Luke",
+    "home": "LP - The Little Legends - J Garcia",
     "location": "Las Palmas",
     "field": "Tee Ball Field",
     "rawDivision": "Tee Ball"
@@ -1761,8 +1761,8 @@
     "start": "10:45 AM",
     "end": "12:15 PM",
     "division": "Baseball - Minors A",
-    "home": "LP Titans - Svehla",
     "away": "TH Minors A",
+    "home": "LP Titans - Svehla",
     "location": "Las Palmas",
     "field": "East Field",
     "rawDivision": "Minors A"
@@ -1774,8 +1774,8 @@
     "start": "10:45 AM",
     "end": "12:45 PM",
     "division": "Baseball - Majors",
-    "home": "LP Coyotes - Rodriguez",
     "away": "TH Majors",
+    "home": "LP Coyotes - Rodriguez",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Majors"
@@ -1787,8 +1787,8 @@
     "start": "11:30 AM",
     "end": "12:30 PM",
     "division": "Tee Ball",
-    "home": "LP The Rookies - E Garcia/Sifuentes",
     "away": "LP Little Rascals - Valadez",
+    "home": "LP The Rookies - E Garcia/Sifuentes",
     "location": "Las Palmas",
     "field": "Tee Ball Field",
     "rawDivision": "Tee Ball"
@@ -1800,8 +1800,8 @@
     "start": "12:00 PM",
     "end": "1:30 PM",
     "division": "Baseball - Minors A",
-    "home": "SC Minors A",
     "away": "LP Bandits - Munoz/Becerra",
+    "home": "SC Minors A",
     "location": "Southcrest",
     "field": "Minors Field",
     "rawDivision": "Minors A"
@@ -1812,12 +1812,12 @@
     "day": "Saturday",
     "start": "12:30 PM",
     "end": "2:00 PM",
-    "division": "Softball - Seniors",
-    "home": "LP Fabulosas - Masino",
+    "division": "Softball - Majors",
     "away": "TBD/BYE",
+    "home": "LP Diamond Girls - Lugo",
     "location": "Las Palmas",
     "field": "East Field",
-    "rawDivision": "Seniors"
+    "rawDivision": "Majors"
   },
   {
     "id": "softball-2026-11-21-tbd-2",
@@ -1826,10 +1826,36 @@
     "start": "1:00 PM",
     "end": "2:30 PM",
     "division": "Softball - Seniors",
+    "away": "TBD",
     "home": "LP Trinidad",
-    "away": "TBD/BYE",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Seniors"
+  },
+  {
+    "id": "softball-2026-11-21-seniors-3",
+    "date": "2026-11-21",
+    "day": "Saturday",
+    "start": "2:15 PM",
+    "end": "3:45 PM",
+    "division": "Softball - Seniors",
+    "away": "TBD",
+    "home": "LP Fabulosas - Masino",
+    "location": "Las Palmas",
+    "field": "East Field",
+    "rawDivision": "Seniors"
+  },
+  {
+    "id": "softball-2026-11-21-minors-3",
+    "date": "2026-11-21",
+    "day": "Saturday",
+    "start": "2:45 PM",
+    "end": "4:00 PM",
+    "division": "Softball - Minors",
+    "away": "LP - ChiquiTrinas - Munoz/Becerra",
+    "home": "LP PocoLocas - Cortez",
+    "location": "Las Palmas",
+    "field": "West Field",
+    "rawDivision": "Minors"
   }
 ]
