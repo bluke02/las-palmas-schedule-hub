@@ -3,6 +3,7 @@ import TeamFinder from "../components/TeamFinder";
 import ScheduleOverview from "../components/ScheduleOverview";
 import MakeupSlots from "../components/MakeupSlots";
 import GameSchedule from "../components/GameSchedule";
+import ShareSchedule from "../components/ShareSchedule";
 
 export default function Home() {
   const [selectedProgram, setSelectedProgram] = useState("");
@@ -25,6 +26,7 @@ export default function Home() {
           Fall 2026 practice and game schedules,
           team information, and field assignments.
         </p>
+        <ShareSchedule />
       </section>
 
       <div className="container">
