@@ -65,7 +65,7 @@
     "rawDivision": "Tee Ball"
   },
   {
-    "id": "softball-2026-09-19-minors",
+    "id": "sb-source-2026-09-19-014",
     "date": "2026-09-19",
     "day": "Saturday",
     "start": "9:00 AM",
@@ -130,30 +130,17 @@
     "rawDivision": "Tee Ball"
   },
   {
-    "id": "softball-2026-09-19-majors",
+    "id": "sb-source-2026-09-19-015",
     "date": "2026-09-19",
     "day": "Saturday",
-    "start": "11:45 AM",
-    "end": "1:15 PM",
+    "start": "11:30 AM",
+    "end": "1:00 PM",
     "division": "Softball - Majors",
-    "away": "SouthBay Diamonds",
-    "home": "LP Diamond Girls - Lugo",
+    "away": "LP Diamond Girls - Lugo",
+    "home": "Diamonds",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Majors"
-  },
-  {
-    "id": "softball-2026-09-19-14u",
-    "date": "2026-09-19",
-    "day": "Saturday",
-    "start": "2:00 PM",
-    "end": "3:30 PM",
-    "division": "Softball - Seniors",
-    "away": "LP Fabulosas - Masino",
-    "home": "SouthBay Storm",
-    "location": "South Bay",
-    "field": "SBLL Field 4",
-    "rawDivision": "Seniors"
   },
   {
     "id": "interleague-8",
@@ -182,7 +169,7 @@
     "rawDivision": "Minors B"
   },
   {
-    "id": "softball-friday-seniors-2026-09-25",
+    "id": "optional-friday-seniors-2026-09-25",
     "date": "2026-09-25",
     "day": "Friday",
     "start": "7:45 PM",
@@ -286,17 +273,17 @@
     "rawDivision": "Tee Ball"
   },
   {
-    "id": "southbay-softball-2026-09-26-14u-23",
+    "id": "sb-source-2026-09-26-022",
     "date": "2026-09-26",
     "day": "Saturday",
     "start": "11:30 AM",
     "end": "1:30 PM",
-    "division": "Softball - Seniors",
+    "division": "Softball - Majors",
     "away": "LP Fabulosas - Masino",
-    "home": "Diablas",
+    "home": "Lady Savages",
     "location": "South Bay",
-    "field": "SBLL Field 4",
-    "rawDivision": "Seniors"
+    "field": "SBLL Field 2",
+    "rawDivision": "Majors"
   },
   {
     "id": "interleague-13",
@@ -312,7 +299,20 @@
     "rawDivision": "Minors A"
   },
   {
-    "id": "softball-2026-09-26-tbd-2",
+    "id": "sb-source-2026-09-26-028",
+    "date": "2026-09-26",
+    "day": "Saturday",
+    "start": "12:30 PM",
+    "end": "2:30 PM",
+    "division": "Softball - Seniors",
+    "away": "LP Trinidad",
+    "home": "Diablas",
+    "location": "South Bay",
+    "field": "SBLL Field 4",
+    "rawDivision": "Seniors"
+  },
+  {
+    "id": "sb-source-2026-09-26-030",
     "date": "2026-09-26",
     "day": "Saturday",
     "start": "1:00 PM",
@@ -325,13 +325,13 @@
     "rawDivision": "Majors"
   },
   {
-    "id": "softball-2026-09-26-tbd-1",
+    "id": "sb-source-2026-09-26-031",
     "date": "2026-09-26",
     "day": "Saturday",
     "start": "2:00 PM",
     "end": "3:30 PM",
     "division": "Softball - Minors",
-    "away": "Sooners",
+    "away": "LP - ChiquiTrinas - Munoz/Becerra",
     "home": "LP PocoLocas - Cortez",
     "location": "Las Palmas",
     "field": "East Field",
@@ -364,7 +364,7 @@
     "rawDivision": "Minors B"
   },
   {
-    "id": "softball-friday-seniors-2026-10-02",
+    "id": "optional-friday-seniors-2026-10-02",
     "date": "2026-10-02",
     "day": "Friday",
     "start": "7:45 PM",
@@ -403,7 +403,7 @@
     "rawDivision": "Tee Ball"
   },
   {
-    "id": "softball-2026-10-03-tbd-1",
+    "id": "sb-source-2026-10-03-045",
     "date": "2026-10-03",
     "day": "Saturday",
     "start": "9:00 AM",
@@ -414,6 +414,19 @@
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Seniors"
+  },
+  {
+    "id": "sb-source-2026-10-03-039",
+    "date": "2026-10-03",
+    "day": "Saturday",
+    "start": "9:00 AM",
+    "end": "11:00 AM",
+    "division": "Softball - Minors",
+    "away": "Rebels",
+    "home": "LP - ChiquiTrinas - Munoz/Becerra",
+    "location": "South Bay",
+    "field": "SBLL Field 3",
+    "rawDivision": "Minors"
   },
   {
     "id": "interleague-17",
@@ -494,17 +507,30 @@
     "rawDivision": "Tee Ball"
   },
   {
-    "id": "southbay-softball-2026-10-03-12u-28",
+    "id": "sb-source-2026-10-03-037",
     "date": "2026-10-03",
     "day": "Saturday",
     "start": "11:30 AM",
     "end": "1:30 PM",
     "division": "Softball - Majors",
-    "away": "Vipers",
-    "home": "LP Diamond Girls - Lugo",
+    "away": "LP Diamond Girls - Lugo",
+    "home": "Vipers",
     "location": "South Bay",
     "field": "SBLL Field 2",
     "rawDivision": "Majors"
+  },
+  {
+    "id": "sb-source-2026-10-03-043",
+    "date": "2026-10-03",
+    "day": "Saturday",
+    "start": "11:30 AM",
+    "end": "1:30 PM",
+    "division": "Softball - Seniors",
+    "away": "LP Fabulosas - Masino",
+    "home": "Supreme",
+    "location": "South Bay",
+    "field": "SBLL Field 4",
+    "rawDivision": "Seniors"
   },
   {
     "id": "interleague-21",
@@ -520,7 +546,7 @@
     "rawDivision": "Minors A"
   },
   {
-    "id": "softball-2026-10-03-tbd-2",
+    "id": "sb-source-2026-10-03-046",
     "date": "2026-10-03",
     "day": "Saturday",
     "start": "12:45 PM",
@@ -559,7 +585,7 @@
     "rawDivision": "Minors B"
   },
   {
-    "id": "softball-friday-seniors-2026-10-09",
+    "id": "optional-friday-seniors-2026-10-09",
     "date": "2026-10-09",
     "day": "Friday",
     "start": "7:45 PM",
@@ -611,7 +637,7 @@
     "rawDivision": "Minors B"
   },
   {
-    "id": "southbay-softball-2026-10-10-10u-38",
+    "id": "sb-source-2026-10-10-051",
     "date": "2026-10-10",
     "day": "Saturday",
     "start": "9:00 AM",
@@ -621,6 +647,19 @@
     "home": "LP PocoLocas - Cortez",
     "location": "South Bay",
     "field": "SBLL Field 2",
+    "rawDivision": "Minors"
+  },
+  {
+    "id": "sb-source-2026-10-10-057",
+    "date": "2026-10-10",
+    "day": "Saturday",
+    "start": "9:00 AM",
+    "end": "11:00 AM",
+    "division": "Softball - Minors",
+    "away": "Sooners",
+    "home": "LP - ChiquiTrinas - Munoz/Becerra",
+    "location": "South Bay",
+    "field": "SBLL Field 4",
     "rawDivision": "Minors"
   },
   {
@@ -663,7 +702,7 @@
     "rawDivision": "Minors A"
   },
   {
-    "id": "softball-2026-10-10-tbd-1",
+    "id": "sb-source-2026-10-10-060",
     "date": "2026-10-10",
     "day": "Saturday",
     "start": "10:45 AM",
@@ -702,30 +741,30 @@
     "rawDivision": "Tee Ball"
   },
   {
-    "id": "southbay-softball-2026-10-10-12u-45",
+    "id": "sb-source-2026-10-10-058",
     "date": "2026-10-10",
     "day": "Saturday",
     "start": "11:30 AM",
     "end": "1:30 PM",
-    "division": "Softball - Majors",
-    "away": "Cherry Bombs",
-    "home": "LP Diamond Girls - Lugo",
+    "division": "Softball - Seniors",
+    "away": "LP Trinidad",
+    "home": "Lady Savages",
     "location": "South Bay",
     "field": "SBLL Field 4",
-    "rawDivision": "Majors"
+    "rawDivision": "Seniors"
   },
   {
-    "id": "softball-2026-10-10-tbd-2",
+    "id": "sb-source-2026-10-10-061",
     "date": "2026-10-10",
     "day": "Saturday",
     "start": "12:30 PM",
     "end": "2:00 PM",
-    "division": "Softball - Minors",
-    "away": "Sooners",
-    "home": "LP - ChiquiTrinas - Munoz/Becerra",
+    "division": "Softball - Majors",
+    "away": "Cherry Bombs",
+    "home": "LP Diamond Girls - Lugo",
     "location": "Las Palmas",
     "field": "West Field",
-    "rawDivision": "Minors"
+    "rawDivision": "Majors"
   },
   {
     "id": "interleague-30",
@@ -754,7 +793,7 @@
     "rawDivision": "Minors B"
   },
   {
-    "id": "softball-friday-seniors-2026-10-16",
+    "id": "optional-friday-seniors-2026-10-16",
     "date": "2026-10-16",
     "day": "Friday",
     "start": "7:45 PM",
@@ -806,7 +845,20 @@
     "rawDivision": "Minors A"
   },
   {
-    "id": "southbay-softball-2026-10-17-10u-55",
+    "id": "sb-source-2026-10-17-066",
+    "date": "2026-10-17",
+    "day": "Saturday",
+    "start": "9:00 AM",
+    "end": "11:00 AM",
+    "division": "Softball - Seniors",
+    "away": "LP Fabulosas - Masino",
+    "home": "Diamonds",
+    "location": "South Bay",
+    "field": "SBLL Field 2",
+    "rawDivision": "Seniors"
+  },
+  {
+    "id": "sb-source-2026-10-17-072",
     "date": "2026-10-17",
     "day": "Saturday",
     "start": "9:00 AM",
@@ -845,7 +897,7 @@
     "rawDivision": "Minors B"
   },
   {
-    "id": "softball-2026-10-17-tbd-1",
+    "id": "sb-source-2026-10-17-075",
     "date": "2026-10-17",
     "day": "Saturday",
     "start": "10:45 AM",
@@ -858,7 +910,7 @@
     "rawDivision": "Seniors"
   },
   {
-    "id": "softball-2026-10-17-tbd-2",
+    "id": "sb-source-2026-10-17-076",
     "date": "2026-10-17",
     "day": "Saturday",
     "start": "10:45 AM",
@@ -897,7 +949,7 @@
     "rawDivision": "Majors"
   },
   {
-    "id": "southbay-softball-2026-10-17-12u-54",
+    "id": "sb-source-2026-10-17-071",
     "date": "2026-10-17",
     "day": "Saturday",
     "start": "2:00 PM",
@@ -936,7 +988,7 @@
     "rawDivision": "Minors B"
   },
   {
-    "id": "softball-friday-seniors-2026-10-23",
+    "id": "optional-friday-seniors-2026-10-23",
     "date": "2026-10-23",
     "day": "Friday",
     "start": "7:45 PM",
@@ -1001,7 +1053,7 @@
     "rawDivision": "Minors B"
   },
   {
-    "id": "southbay-softball-2026-10-24-10u-66",
+    "id": "sb-source-2026-10-24-084",
     "date": "2026-10-24",
     "day": "Saturday",
     "start": "9:00 AM",
@@ -1010,7 +1062,7 @@
     "away": "Sooners",
     "home": "LP PocoLocas - Cortez",
     "location": "South Bay",
-    "field": "SBLL Field 4",
+    "field": "SBLL Field 3",
     "rawDivision": "Minors"
   },
   {
@@ -1066,33 +1118,46 @@
     "rawDivision": "Tee Ball"
   },
   {
-    "id": "southbay-softball-2026-10-24-12u-61",
+    "id": "sb-source-2026-10-24-082",
     "date": "2026-10-24",
     "day": "Saturday",
     "start": "11:30 AM",
     "end": "1:30 PM",
-    "division": "Softball - Majors",
-    "away": "Supreme",
-    "home": "LP Diamond Girls - Lugo",
+    "division": "Softball - Minors",
+    "away": "Rebels",
+    "home": "LP - ChiquiTrinas - Munoz/Becerra",
     "location": "South Bay",
     "field": "SBLL Field 2",
-    "rawDivision": "Majors"
+    "rawDivision": "Minors"
   },
   {
-    "id": "softball-2026-10-24-tbd-1",
+    "id": "sb-source-2026-10-24-088",
+    "date": "2026-10-24",
+    "day": "Saturday",
+    "start": "11:30 AM",
+    "end": "1:30 PM",
+    "division": "Softball - Seniors",
+    "away": "LP Trinidad",
+    "home": "Cherry Bombs",
+    "location": "South Bay",
+    "field": "SBLL Field 4",
+    "rawDivision": "Seniors"
+  },
+  {
+    "id": "sb-source-2026-10-24-090",
     "date": "2026-10-24",
     "day": "Saturday",
     "start": "12:30 PM",
     "end": "2:00 PM",
-    "division": "Softball - Minors",
-    "away": "Rebels",
-    "home": "LP - ChiquiTrinas - Munoz/Becerra",
+    "division": "Softball - Majors",
+    "away": "Supreme",
+    "home": "LP Diamond Girls - Lugo",
     "location": "Las Palmas",
     "field": "West Field",
-    "rawDivision": "Minors"
+    "rawDivision": "Majors"
   },
   {
-    "id": "softball-2026-10-24-tbd-2",
+    "id": "sb-source-2026-10-24-091",
     "date": "2026-10-24",
     "day": "Saturday",
     "start": "12:45 PM",
@@ -1131,7 +1196,7 @@
     "rawDivision": "Minors B"
   },
   {
-    "id": "softball-friday-seniors-2026-10-30",
+    "id": "optional-friday-seniors-2026-10-30",
     "date": "2026-10-30",
     "day": "Friday",
     "start": "7:45 PM",
@@ -1194,6 +1259,19 @@
     "location": "SDA",
     "field": "Major Field",
     "rawDivision": "Majors"
+  },
+  {
+    "id": "sb-source-2026-10-31-102",
+    "date": "2026-10-31",
+    "day": "Saturday",
+    "start": "9:00 AM",
+    "end": "11:00 AM",
+    "division": "Softball - Seniors",
+    "away": "LP Fabulosas - Masino",
+    "home": "Lady Savages",
+    "location": "South Bay",
+    "field": "SBLL Field 4",
+    "rawDivision": "Seniors"
   },
   {
     "id": "tee-ball-20",
@@ -1261,7 +1339,7 @@
     "rawDivision": "Tee Ball"
   },
   {
-    "id": "southbay-softball-2026-10-31-12u-78",
+    "id": "sb-source-2026-10-31-097",
     "date": "2026-10-31",
     "day": "Saturday",
     "start": "11:30 AM",
@@ -1270,11 +1348,24 @@
     "away": "Cherry Bombs",
     "home": "LP Diamond Girls - Lugo",
     "location": "South Bay",
-    "field": "SBLL Field 4",
+    "field": "SBLL Field 2",
     "rawDivision": "Majors"
   },
   {
-    "id": "softball-2026-10-31-tbd-2",
+    "id": "sb-source-2026-10-31-105",
+    "date": "2026-10-31",
+    "day": "Saturday",
+    "start": "12:45 PM",
+    "end": "2:15 PM",
+    "division": "Softball - Seniors",
+    "away": "Storm",
+    "home": "LP Trinidad",
+    "location": "Las Palmas",
+    "field": "East Field",
+    "rawDivision": "Seniors"
+  },
+  {
+    "id": "sb-source-2026-10-31-106",
     "date": "2026-10-31",
     "day": "Saturday",
     "start": "12:45 PM",
@@ -1283,21 +1374,8 @@
     "away": "LP PocoLocas - Cortez",
     "home": "LP - ChiquiTrinas - Munoz/Becerra",
     "location": "Las Palmas",
-    "field": "East Field",
-    "rawDivision": "Minors"
-  },
-  {
-    "id": "softball-2026-10-31-tbd-1",
-    "date": "2026-10-31",
-    "day": "Saturday",
-    "start": "12:45 PM",
-    "end": "2:15 PM",
-    "division": "Softball - Seniors",
-    "away": "LP Trinidad",
-    "home": "Storm",
-    "location": "Las Palmas",
     "field": "West Field",
-    "rawDivision": "Seniors"
+    "rawDivision": "Minors"
   },
   {
     "id": "interleague-51",
@@ -1339,7 +1417,7 @@
     "rawDivision": "Minors A"
   },
   {
-    "id": "softball-friday-seniors-2026-11-06",
+    "id": "optional-friday-seniors-2026-11-06",
     "date": "2026-11-06",
     "day": "Friday",
     "start": "7:45 PM",
@@ -1391,7 +1469,7 @@
     "rawDivision": "Minors B"
   },
   {
-    "id": "southbay-softball-2026-11-07-10u-88",
+    "id": "sb-source-2026-11-07-112",
     "date": "2026-11-07",
     "day": "Saturday",
     "start": "9:00 AM",
@@ -1400,8 +1478,21 @@
     "away": "Rebels",
     "home": "LP - ChiquiTrinas - Munoz/Becerra",
     "location": "South Bay",
-    "field": "SBLL Field 4",
+    "field": "SBLL Field 3",
     "rawDivision": "Minors"
+  },
+  {
+    "id": "sb-source-2026-11-07-115",
+    "date": "2026-11-07",
+    "day": "Saturday",
+    "start": "9:00 AM",
+    "end": "11:00 AM",
+    "division": "Softball - Seniors",
+    "away": "LP Trinidad",
+    "home": "Supreme",
+    "location": "South Bay",
+    "field": "SBLL Field 4",
+    "rawDivision": "Seniors"
   },
   {
     "id": "tee-ball-23",
@@ -1456,33 +1547,33 @@
     "rawDivision": "Majors"
   },
   {
-    "id": "softball-2026-11-07-tbd-1",
+    "id": "sb-source-2026-11-07-118",
     "date": "2026-11-07",
     "day": "Saturday",
     "start": "12:45 PM",
     "end": "2:15 PM",
-    "division": "Softball - Minors",
-    "away": "Sooners",
-    "home": "LP PocoLocas - Cortez",
+    "division": "Softball - Majors",
+    "away": "SB Royalty",
+    "home": "LP Diamond Girls - Lugo",
     "location": "Las Palmas",
     "field": "West Field",
-    "rawDivision": "Minors"
+    "rawDivision": "Majors"
   },
   {
-    "id": "southbay-softball-2026-11-07-12u-87",
+    "id": "sb-source-2026-11-07-114",
     "date": "2026-11-07",
     "day": "Saturday",
     "start": "2:00 PM",
     "end": "4:00 PM",
-    "division": "Softball - Majors",
-    "away": "SB Royalty",
-    "home": "LP Diamond Girls - Lugo",
+    "division": "Softball - Minors",
+    "away": "Sooners",
+    "home": "LP PocoLocas - Cortez",
     "location": "South Bay",
     "field": "SBLL Field 3",
-    "rawDivision": "Majors"
+    "rawDivision": "Minors"
   },
   {
-    "id": "softball-2026-11-07-tbd-2",
+    "id": "sb-source-2026-11-07-119",
     "date": "2026-11-07",
     "day": "Saturday",
     "start": "2:30 PM",
@@ -1521,7 +1612,7 @@
     "rawDivision": "Minors B"
   },
   {
-    "id": "softball-friday-seniors-2026-11-13",
+    "id": "optional-friday-seniors-2026-11-13",
     "date": "2026-11-13",
     "day": "Friday",
     "start": "7:45 PM",
@@ -1532,19 +1623,6 @@
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Seniors"
-  },
-  {
-    "id": "softball-2026-11-14-tbd-1",
-    "date": "2026-11-14",
-    "day": "Saturday",
-    "start": "9:00 AM",
-    "end": "10:30 AM",
-    "division": "Softball - Minors",
-    "away": "LP PocoLocas - Cortez",
-    "home": "LP - ChiquiTrinas - Munoz/Becerra",
-    "location": "Las Palmas",
-    "field": "West Field",
-    "rawDivision": "Minors"
   },
   {
     "id": "interleague-59",
@@ -1571,6 +1649,32 @@
     "location": "Las Palmas",
     "field": "Tee Ball Field",
     "rawDivision": "Tee Ball"
+  },
+  {
+    "id": "sb-source-2026-11-14-131",
+    "date": "2026-11-14",
+    "day": "Saturday",
+    "start": "9:00 AM",
+    "end": "10:30 AM",
+    "division": "Softball - Minors",
+    "away": "LP PocoLocas - Cortez",
+    "home": "LP - ChiquiTrinas - Munoz/Becerra",
+    "location": "Las Palmas",
+    "field": "West Field",
+    "rawDivision": "Minors"
+  },
+  {
+    "id": "sb-source-2026-11-14-122",
+    "date": "2026-11-14",
+    "day": "Saturday",
+    "start": "9:00 AM",
+    "end": "11:00 AM",
+    "division": "Softball - Majors",
+    "away": "Gators",
+    "home": "LP Diamond Girls - Lugo",
+    "location": "South Bay",
+    "field": "SBLL Field 2",
+    "rawDivision": "Majors"
   },
   {
     "id": "interleague-60",
@@ -1612,17 +1716,17 @@
     "rawDivision": "Tee Ball"
   },
   {
-    "id": "southbay-softball-2026-11-14-12u-94",
+    "id": "sb-source-2026-11-14-129",
     "date": "2026-11-14",
     "day": "Saturday",
     "start": "11:30 AM",
     "end": "1:30 PM",
-    "division": "Softball - Majors",
-    "away": "Gators",
-    "home": "LP Diamond Girls - Lugo",
+    "division": "Softball - Seniors",
+    "away": "LP Fabulosas - Masino",
+    "home": "Cherry Bombs",
     "location": "South Bay",
-    "field": "SBLL Field 2",
-    "rawDivision": "Majors"
+    "field": "SBLL Field 4",
+    "rawDivision": "Seniors"
   },
   {
     "id": "interleague-62",
@@ -1651,7 +1755,7 @@
     "rawDivision": "Minors B"
   },
   {
-    "id": "softball-2026-11-14-tbd-2",
+    "id": "sb-source-2026-11-14-132",
     "date": "2026-11-14",
     "day": "Saturday",
     "start": "2:00 PM",
@@ -1690,7 +1794,7 @@
     "rawDivision": "Minors B"
   },
   {
-    "id": "softball-friday-seniors-2026-11-20",
+    "id": "optional-friday-seniors-2026-11-20",
     "date": "2026-11-20",
     "day": "Friday",
     "start": "7:45 PM",
@@ -1807,50 +1911,11 @@
     "rawDivision": "Minors A"
   },
   {
-    "id": "softball-2026-11-21-tbd-1",
-    "date": "2026-11-21",
-    "day": "Saturday",
-    "start": "12:30 PM",
-    "end": "2:00 PM",
-    "division": "Softball - Majors",
-    "away": "TBD/BYE",
-    "home": "LP Diamond Girls - Lugo",
-    "location": "Las Palmas",
-    "field": "East Field",
-    "rawDivision": "Majors"
-  },
-  {
-    "id": "softball-2026-11-21-tbd-2",
-    "date": "2026-11-21",
-    "day": "Saturday",
-    "start": "1:00 PM",
-    "end": "2:30 PM",
-    "division": "Softball - Seniors",
-    "away": "TBD",
-    "home": "LP Trinidad",
-    "location": "Las Palmas",
-    "field": "West Field",
-    "rawDivision": "Seniors"
-  },
-  {
-    "id": "softball-2026-11-21-seniors-3",
-    "date": "2026-11-21",
-    "day": "Saturday",
-    "start": "2:15 PM",
-    "end": "3:45 PM",
-    "division": "Softball - Seniors",
-    "away": "TBD",
-    "home": "LP Fabulosas - Masino",
-    "location": "Las Palmas",
-    "field": "East Field",
-    "rawDivision": "Seniors"
-  },
-  {
-    "id": "softball-2026-11-21-minors-3",
+    "id": "sb-source-2026-11-21-137",
     "date": "2026-11-21",
     "day": "Saturday",
     "start": "2:45 PM",
-    "end": "4:00 PM",
+    "end": "4:15 PM",
     "division": "Softball - Minors",
     "away": "LP - ChiquiTrinas - Munoz/Becerra",
     "home": "LP PocoLocas - Cortez",

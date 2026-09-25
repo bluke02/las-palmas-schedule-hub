@@ -117,11 +117,11 @@ export default function GameSchedule({
                             <td>{game.location}</td>
                             <td>
                               {game.field}
-                              {gameRevisions[game.field] && (
+                              {gameRevisions[game.id] && (
                                 <span className="field-revision">
                                   Updated{" "}
                                   {formatRevisionTimestamp(
-                                    gameRevisions[game.field]
+                                    gameRevisions[game.id]
                                   )}
                                 </span>
                               )}
