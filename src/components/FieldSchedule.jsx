@@ -42,6 +42,10 @@ function sortGames(gamesToSort) {
   );
 }
 
+function getFieldGroupKey(game) {
+  return `${game.location || "Unknown"} | ${game.field || "Unknown"}`;
+}
+
 export default function FieldSchedule({
   selectedProgram,
   selectedDivision,
@@ -60,11 +64,31 @@ export default function FieldSchedule({
         game.home === selectedTeamName ||
         game.away === selectedTeamName)
   );
-  const gamesByField = [...new Set(gamesForView.map((game) => game.field))]
-    .sort((a, b) => a.localeCompare(b))
-    .map((field) => ({
-      field,
-      games: sortGames(gamesForView.filter((game) => game.field === field)),
+  const gamesByField = Array.from(
+    gamesForView.reduce((groups, game) => {
+      const key = getFieldGroupKey(game);
+      if (!groups.has(key)) {
+        groups.set(key, {
+          id: key,
+          location: game.location,
+          field: game.field,
+          games: [],
+        });
+      }
+      groups.get(key).games.push(game);
+      return groups;
+    }, new Map()).values()
+  )
+    .sort((a, b) => {
+      const locationComparison = (a.location || "").localeCompare(b.location || "");
+      if (locationComparison !== 0) {
+        return locationComparison;
+      }
+      return (a.field || "").localeCompare(b.field || "");
+    })
+    .map((fieldGroup) => ({
+      ...fieldGroup,
+      games: sortGames(fieldGroup.games),
     }));
 
   return (
@@ -79,9 +103,11 @@ export default function FieldSchedule({
 
       {gamesByField.length > 0 ? (
         <div className="field-schedules">
-          {gamesByField.map(({ field, games: fieldGames }) => (
-            <section className="field-schedule" key={field}>
-              <h3>{field}</h3>
+          {gamesByField.map(({ field, location, games: fieldGames }) => (
+            <section className="field-schedule" key={`${location} | ${field}`}>
+              <h3>
+                {location} - {field}
+              </h3>
               <div className="schedule-table-wrapper">
                 <table>
                   <thead>
