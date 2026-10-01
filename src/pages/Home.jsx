@@ -3,6 +3,7 @@ import TeamFinder from "../components/TeamFinder";
 import ScheduleOverview from "../components/ScheduleOverview";
 import MakeupSlots from "../components/MakeupSlots";
 import GameSchedule from "../components/GameSchedule";
+import FieldSchedule from "../components/FieldSchedule";
 import ShareSchedule from "../components/ShareSchedule";
 
 export default function Home() {
@@ -73,6 +74,14 @@ export default function Home() {
           >
             Game Schedule
           </button>
+          <button
+            className={activeTab === "fields" ? "tab-button active" : "tab-button"}
+            onClick={() => setActiveTab("fields")}
+            role="tab"
+            aria-selected={activeTab === "fields"}
+          >
+            Games by Field
+          </button>
         </div>
 
         {activeTab === "schedule" ? (
@@ -83,6 +92,12 @@ export default function Home() {
           />
         ) : activeTab === "games" ? (
           <GameSchedule
+            selectedProgram={selectedProgram}
+            selectedDivision={selectedDivision}
+            selectedTeam={selectedTeam}
+          />
+        ) : activeTab === "fields" ? (
+          <FieldSchedule
             selectedProgram={selectedProgram}
             selectedDivision={selectedDivision}
             selectedTeam={selectedTeam}
