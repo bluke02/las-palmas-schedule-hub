@@ -6,14 +6,23 @@ export default function TeamFinder({
   selectedDivision,
   selectedTeam,
   selectedLocation,
+  selectedField,
   onProgramChange,
   onDivisionChange,
   onTeamChange,
   onLocationChange,
+  onFieldChange,
 }) {
   const programs = [...new Set(schedule.map((team) => team.division.split(" - ")[0]))];
   const locations = [...new Set(games.map((game) => game.location))]
     .sort((a, b) => a.localeCompare(b));
+  const fields = [
+    ...new Set(
+      games
+        .filter((game) => !selectedLocation || game.location === selectedLocation)
+        .map((game) => game.field)
+    ),
+  ].sort((a, b) => a.localeCompare(b));
   const divisions = [
     ...new Set(
       schedule
@@ -90,9 +99,23 @@ export default function TeamFinder({
             ))}
           </select>
         </label>
+        <label>
+          Game Field
+          <select
+            value={selectedField}
+            onChange={(e) => onFieldChange(e.target.value)}
+          >
+            <option value="">All Fields</option>
+            {fields.map((field) => (
+              <option key={field} value={field}>
+                {field}
+              </option>
+            ))}
+          </select>
+        </label>
       </div>
       <p className="filter-note">
-        Game location applies to Game Schedule and Games by Field.
+        Game location and field filters apply to the Game Schedule.
       </p>
 
       <select

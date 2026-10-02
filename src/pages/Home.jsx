@@ -3,7 +3,6 @@ import TeamFinder from "../components/TeamFinder";
 import ScheduleOverview from "../components/ScheduleOverview";
 import MakeupSlots from "../components/MakeupSlots";
 import GameSchedule from "../components/GameSchedule";
-import FieldSchedule from "../components/FieldSchedule";
 import ShareSchedule from "../components/ShareSchedule";
 
 export default function Home() {
@@ -11,6 +10,7 @@ export default function Home() {
   const [selectedDivision, setSelectedDivision] = useState("");
   const [selectedTeam, setSelectedTeam] = useState("");
   const [selectedLocation, setSelectedLocation] = useState("");
+  const [selectedField, setSelectedField] = useState("");
   const [activeTab, setActiveTab] = useState("schedule");
 
   return (
@@ -38,6 +38,7 @@ export default function Home() {
             selectedDivision={selectedDivision}
             selectedTeam={selectedTeam}
             selectedLocation={selectedLocation}
+            selectedField={selectedField}
             onProgramChange={(program) => {
               setSelectedProgram(program);
               setSelectedDivision("");
@@ -48,7 +49,11 @@ export default function Home() {
               setSelectedTeam("");
             }}
             onTeamChange={setSelectedTeam}
-            onLocationChange={setSelectedLocation}
+            onLocationChange={(location) => {
+              setSelectedLocation(location);
+              setSelectedField("");
+            }}
+            onFieldChange={setSelectedField}
           />
         </div>
 
@@ -77,14 +82,6 @@ export default function Home() {
           >
             Game Schedule
           </button>
-          <button
-            className={activeTab === "fields" ? "tab-button active" : "tab-button"}
-            onClick={() => setActiveTab("fields")}
-            role="tab"
-            aria-selected={activeTab === "fields"}
-          >
-            Games by Field
-          </button>
         </div>
 
         {activeTab === "schedule" ? (
@@ -100,12 +97,7 @@ export default function Home() {
             selectedDivision={selectedDivision}
             selectedTeam={selectedTeam}
             selectedLocation={selectedLocation}
-          />
-        ) : activeTab === "fields" ? (
-          <FieldSchedule
-            selectedProgram={selectedProgram}
-            selectedDivision={selectedDivision}
-            selectedTeam={selectedTeam}
+            selectedField={selectedField}
           />
         ) : (
           <MakeupSlots />
