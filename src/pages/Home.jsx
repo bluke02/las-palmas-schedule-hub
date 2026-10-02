@@ -10,6 +10,7 @@ export default function Home() {
   const [selectedProgram, setSelectedProgram] = useState("");
   const [selectedDivision, setSelectedDivision] = useState("");
   const [selectedTeam, setSelectedTeam] = useState("");
+  const [selectedLocation, setSelectedLocation] = useState("");
   const [activeTab, setActiveTab] = useState("schedule");
 
   return (
@@ -36,6 +37,7 @@ export default function Home() {
             selectedProgram={selectedProgram}
             selectedDivision={selectedDivision}
             selectedTeam={selectedTeam}
+            selectedLocation={selectedLocation}
             onProgramChange={(program) => {
               setSelectedProgram(program);
               setSelectedDivision("");
@@ -46,6 +48,7 @@ export default function Home() {
               setSelectedTeam("");
             }}
             onTeamChange={setSelectedTeam}
+            onLocationChange={setSelectedLocation}
           />
         </div>
 
@@ -89,12 +92,14 @@ export default function Home() {
             selectedProgram={selectedProgram}
             selectedDivision={selectedDivision}
             selectedTeam={selectedTeam}
+            selectedLocation={selectedLocation}
           />
         ) : activeTab === "games" ? (
           <GameSchedule
             selectedProgram={selectedProgram}
             selectedDivision={selectedDivision}
             selectedTeam={selectedTeam}
+            selectedLocation={selectedLocation}
           />
         ) : activeTab === "fields" ? (
           <FieldSchedule

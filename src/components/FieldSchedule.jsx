@@ -46,6 +46,7 @@ export default function FieldSchedule({
   selectedProgram,
   selectedDivision,
   selectedTeam,
+  selectedLocation,
 }) {
   const selectedTeamName = schedule.find(
     (team) => team.id === selectedTeam
@@ -58,7 +59,8 @@ export default function FieldSchedule({
       (!selectedDivision || game.division === selectedDivision) &&
       (!selectedTeamName ||
         game.home === selectedTeamName ||
-        game.away === selectedTeamName)
+        game.away === selectedTeamName) &&
+      (!selectedLocation || game.location === selectedLocation)
   );
   const gamesByField = [...new Set(gamesForView.map((game) => game.field))]
     .sort((a, b) => a.localeCompare(b))
@@ -123,7 +125,7 @@ export default function FieldSchedule({
         </div>
       ) : (
         <p className="empty-schedule">
-          No games are listed for the selected program, division, or team.
+          No games are listed for the selected filters.
         </p>
       )}
     </section>

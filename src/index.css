@@ -126,6 +126,11 @@ select {
   min-width: 12rem;
 }
 
+.filter-note {
+  color: #526174;
+  margin: -0.5rem 0 1rem;
+}
+
 .team-card {
   border-top: 1px solid #e2e8f0;
   margin-top: 1.5rem;

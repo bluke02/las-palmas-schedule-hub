@@ -1,14 +1,19 @@
 import schedule from "../data/schedule.json";
+import games from "../data/games.json";
 
 export default function TeamFinder({
   selectedProgram,
   selectedDivision,
   selectedTeam,
+  selectedLocation,
   onProgramChange,
   onDivisionChange,
   onTeamChange,
+  onLocationChange,
 }) {
   const programs = [...new Set(schedule.map((team) => team.division.split(" - ")[0]))];
+  const locations = [...new Set(games.map((game) => game.location))]
+    .sort((a, b) => a.localeCompare(b));
   const divisions = [
     ...new Set(
       schedule
@@ -71,7 +76,24 @@ export default function TeamFinder({
             ))}
           </select>
         </label>
+        <label>
+          Game Location
+          <select
+            value={selectedLocation}
+            onChange={(e) => onLocationChange(e.target.value)}
+          >
+            <option value="">All Locations</option>
+            {locations.map((location) => (
+              <option key={location} value={location}>
+                {location}
+              </option>
+            ))}
+          </select>
+        </label>
       </div>
+      <p className="filter-note">
+        Game location applies to Game Schedule and Games by Field.
+      </p>
 
       <select
         value={selectedTeam}
