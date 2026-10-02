@@ -115,7 +115,7 @@ export default function TeamFinder({
         </label>
       </div>
       <p className="filter-note">
-        Game location and field filters apply to Game Schedule and Games by Field.
+        Game location and field filters apply to the Game Schedule.
       </p>
 
       <select
