@@ -47,6 +47,7 @@ export default function GameSchedule({
   selectedDivision,
   selectedTeam,
   selectedLocation,
+  selectedField,
 }) {
   const selectedTeamName = schedule.find(
     (team) => team.id === selectedTeam
@@ -60,7 +61,8 @@ export default function GameSchedule({
       (!selectedTeamName ||
         game.home === selectedTeamName ||
         game.away === selectedTeamName) &&
-      (!selectedLocation || game.location === selectedLocation)
+      (!selectedLocation || game.location === selectedLocation) &&
+      (!selectedField || game.field === selectedField)
   );
   const gamesByProgram = [...new Set(
     gamesForView.map((game) => game.division.split(" - ")[0])

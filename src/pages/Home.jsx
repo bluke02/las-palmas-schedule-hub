@@ -11,6 +11,7 @@ export default function Home() {
   const [selectedDivision, setSelectedDivision] = useState("");
   const [selectedTeam, setSelectedTeam] = useState("");
   const [selectedLocation, setSelectedLocation] = useState("");
+  const [selectedField, setSelectedField] = useState("");
   const [activeTab, setActiveTab] = useState("schedule");
 
   return (
@@ -38,6 +39,7 @@ export default function Home() {
             selectedDivision={selectedDivision}
             selectedTeam={selectedTeam}
             selectedLocation={selectedLocation}
+            selectedField={selectedField}
             onProgramChange={(program) => {
               setSelectedProgram(program);
               setSelectedDivision("");
@@ -48,7 +50,11 @@ export default function Home() {
               setSelectedTeam("");
             }}
             onTeamChange={setSelectedTeam}
-            onLocationChange={setSelectedLocation}
+            onLocationChange={(location) => {
+              setSelectedLocation(location);
+              setSelectedField("");
+            }}
+            onFieldChange={setSelectedField}
           />
         </div>
 
@@ -100,12 +106,15 @@ export default function Home() {
             selectedDivision={selectedDivision}
             selectedTeam={selectedTeam}
             selectedLocation={selectedLocation}
+            selectedField={selectedField}
           />
         ) : activeTab === "fields" ? (
           <FieldSchedule
             selectedProgram={selectedProgram}
             selectedDivision={selectedDivision}
             selectedTeam={selectedTeam}
+            selectedLocation={selectedLocation}
+            selectedField={selectedField}
           />
         ) : (
           <MakeupSlots />
