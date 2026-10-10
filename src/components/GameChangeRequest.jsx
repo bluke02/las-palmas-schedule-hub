@@ -54,7 +54,8 @@ export default function GameChangeRequest() {
       <h2 id="change-request-heading">Request a Game Schedule Change</h2>
       <p className="schedule-intro">
         Tell us which game needs an adjustment and what you’re requesting.
-        Submitting a request does not automatically change the schedule.
+        We’ll use your contact information to verify the request before
+        approval. Submitting a request does not automatically change the schedule.
       </p>
 
       {submissionState === "success" ? (
@@ -84,19 +85,38 @@ export default function GameChangeRequest() {
           </p>
 
           <div className="change-request-fields">
-            <label>
-              Your name <span aria-hidden="true">*</span>
-              <input name="requester-name" type="text" autoComplete="name" required />
-            </label>
-            <label>
-              Email <span aria-hidden="true">*</span>
-              <input
-                name="requester-email"
-                type="email"
-                autoComplete="email"
-                required
-              />
-            </label>
+            <fieldset className="change-request-contact change-request-wide">
+              <legend>Contact Information</legend>
+              <p>Required so we can follow up to validate your request.</p>
+              <div className="change-request-contact-fields">
+                <label>
+                  Your name <span aria-hidden="true">*</span>
+                  <input
+                    name="requester-name"
+                    type="text"
+                    autoComplete="name"
+                    required
+                  />
+                </label>
+                <label>
+                  Email <span aria-hidden="true">*</span>
+                  <input
+                    name="requester-email"
+                    type="email"
+                    autoComplete="email"
+                    required
+                  />
+                </label>
+                <label>
+                  Phone (optional)
+                  <input
+                    name="requester-phone"
+                    type="tel"
+                    autoComplete="tel"
+                  />
+                </label>
+              </div>
+            </fieldset>
             <label>
               Team
               <input name="team" type="text" />
