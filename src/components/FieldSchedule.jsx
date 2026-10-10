@@ -1,6 +1,8 @@
-import games from "../data/games.json";
+import allGames from "../data/games.json";
 import gameRevisions from "../data/gameRevisions.json";
 import schedule from "../data/schedule.json";
+
+const games = allGames.filter((game) => !game.bye);
 
 function formatDate(date) {
   return new Intl.DateTimeFormat("en-US", {

@@ -1,5 +1,7 @@
 import schedule from "../data/schedule.json";
-import games from "../data/games.json";
+import allGames from "../data/games.json";
+
+const games = allGames.filter((game) => !game.bye);
 
 export default function TeamFinder({
   selectedProgram,
