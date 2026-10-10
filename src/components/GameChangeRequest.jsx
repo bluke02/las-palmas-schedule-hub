@@ -45,6 +45,18 @@ const FIELD_NAMES = {
   other: ["requested-other"],
 };
 
+const ALL_REQUESTED_FIELDS = [
+  "requested-date",
+  "requested-start-time",
+  "requested-end-time",
+  "requested-home",
+  "requested-away",
+  "requested-location",
+  "requested-field",
+  "requested-division",
+  "requested-other",
+];
+
 const NEAR_PAST_DAYS = 7;
 
 function isValidDate(value) {
@@ -159,12 +171,24 @@ export default function GameChangeRequest() {
     setSubmissionState("submitting");
 
     try {
+      // Ensure all requested-* fields are present (empty if not used)
+      const completeFormData = new URLSearchParams();
+      formData.forEach((value, key) => {
+        completeFormData.append(key, value);
+      });
+      // Add empty values for unused requested-* fields
+      ALL_REQUESTED_FIELDS.forEach((field) => {
+        if (!completeFormData.has(field)) {
+          completeFormData.append(field, "");
+        }
+      });
+
       const response = await fetch("/", {
         method: "POST",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
         },
-        body: new URLSearchParams(formData).toString(),
+        body: completeFormData.toString(),
       });
 
       if (!response.ok) {
@@ -184,8 +208,8 @@ export default function GameChangeRequest() {
     <section className="change-request" aria-labelledby="change-request-heading">
       <h2 id="change-request-heading">Request a Game Schedule Change</h2>
       <p className="schedule-intro">
-        Tell us which game needs an adjustment and what you’re requesting.
-        We’ll use your contact information to verify the request before
+        Tell us which game needs an adjustment and what you're requesting.
+        We'll use your contact information to verify the request before
         approval. Submitting a request does not automatically change the schedule.
       </p>
 
@@ -321,7 +345,7 @@ export default function GameChangeRequest() {
           )}
           {submissionState === "error" && (
             <p className="change-request-error" role="alert">
-              We couldn’t send your request. Please try again later.
+              We couldn't send your request. Please try again later.
             </p>
           )}
           <button type="submit" disabled={submissionState === "submitting"}>
