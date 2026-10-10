@@ -13,10 +13,137 @@ function describeGame(game) {
   return `${formatDate(game.date)} · ${game.start}–${game.end} · ${game.division} · ${game.away} vs. ${game.home} · ${game.location} (${game.field})`;
 }
 
+const CHANGE_TYPES = [
+  { value: "date", label: "Date", hint: "Choose the new game date." },
+  { value: "start-time", label: "Start Time", hint: "Choose the new start time." },
+  { value: "end-time", label: "End Time", hint: "Choose the new end time." },
+  { value: "home-team", label: "Home Team", hint: "Choose the new home team." },
+  { value: "away-team", label: "Away Team", hint: "Choose the new away team." },
+  { value: "location", label: "Location", hint: "Choose the new location." },
+  { value: "field", label: "Field", hint: "Choose the new field." },
+  { value: "division", label: "Division (optional)", hint: "Choose the new division." },
+  { value: "other", label: "Other", hint: "Describe the change you are requesting." },
+];
+
+const uniqueSorted = (values) =>
+  [...new Set(values.filter(Boolean))].sort((a, b) => a.localeCompare(b));
+
+const teams = uniqueSorted(games.flatMap((game) => [game.home, game.away]));
+const locations = uniqueSorted(games.map((game) => game.location));
+const fields = uniqueSorted(games.map((game) => game.field));
+const divisions = uniqueSorted(games.map((game) => game.division));
+
+const FIELD_NAMES = {
+  date: ["requested-date"],
+  "start-time": ["requested-start-time"],
+  "end-time": ["requested-end-time"],
+  "home-team": ["requested-home"],
+  "away-team": ["requested-away"],
+  location: ["requested-location"],
+  field: ["requested-field"],
+  division: ["requested-division"],
+  other: ["requested-other"],
+};
+
+const NEAR_PAST_DAYS = 7;
+
+function isValidDate(value) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
+  const date = new Date(`${value}T12:00:00`);
+  if (Number.isNaN(date.getTime())) return false;
+  if (date.toISOString().slice(0, 10) !== value) return false;
+  const cutoff = new Date();
+  cutoff.setHours(0, 0, 0, 0);
+  cutoff.setDate(cutoff.getDate() - NEAR_PAST_DAYS);
+  return date >= cutoff;
+}
+
+function isValidTime(value) {
+  return /^([01]\d|2[0-3]):[0-5]\d$/.test(value);
+}
+
+function validateRequest(changeType, formData) {
+  const names = FIELD_NAMES[changeType];
+  if (!names) return "Please select a type of change.";
+  const value = (formData.get(names[0]) || "").toString().trim();
+  if (!value) return "Please provide the requested change value.";
+  if (changeType === "date" && !isValidDate(value)) {
+    return "Enter a valid date that is in the future or within the past week.";
+  }
+  if ((changeType === "start-time" || changeType === "end-time") && !isValidTime(value)) {
+    return "Enter a valid time.";
+  }
+  return "";
+}
+
+function OptionSelect({ name, label, options, placeholder }) {
+  return (
+    <label>
+      {label}
+      <select name={name} defaultValue="" required>
+        <option value="">{placeholder}</option>
+        {options.map((option) => (
+          <option key={option} value={option}>
+            {option}
+          </option>
+        ))}
+      </select>
+    </label>
+  );
+}
+
+function RequestedValueInput({ changeType }) {
+  switch (changeType) {
+    case "date":
+      return (
+        <label>
+          Requested date
+          <input name="requested-date" type="date" required />
+        </label>
+      );
+    case "start-time":
+      return (
+        <label>
+          Requested start time
+          <input name="requested-start-time" type="time" required />
+        </label>
+      );
+    case "end-time":
+      return (
+        <label>
+          Requested end time
+          <input name="requested-end-time" type="time" required />
+        </label>
+      );
+    case "home-team":
+      return <OptionSelect name="requested-home" label="Requested home team" options={teams} placeholder="Choose a team" />;
+    case "away-team":
+      return <OptionSelect name="requested-away" label="Requested away team" options={teams} placeholder="Choose a team" />;
+    case "location":
+      return <OptionSelect name="requested-location" label="Requested location" options={locations} placeholder="Choose a location" />;
+    case "field":
+      return <OptionSelect name="requested-field" label="Requested field" options={fields} placeholder="Choose a field" />;
+    case "division":
+      return <OptionSelect name="requested-division" label="Requested division" options={divisions} placeholder="Choose a division" />;
+    case "other":
+      return (
+        <label className="change-request-wide">
+          Requested change
+          <textarea name="requested-other" rows="3" required />
+        </label>
+      );
+    default:
+      return null;
+  }
+}
+
 export default function GameChangeRequest() {
   const [selectedGameId, setSelectedGameId] = useState("");
+  const [changeType, setChangeType] = useState("");
+  const [validationError, setValidationError] = useState("");
   const [submissionState, setSubmissionState] = useState("idle");
   const formRef = useRef(null);
+  const selectedChangeType = CHANGE_TYPES.find((type) => type.value === changeType);
   const selectedGame = games.find((game) => game.id === selectedGameId);
   const sortedGames = [...games].sort(
     (a, b) => a.date.localeCompare(b.date) || a.start.localeCompare(b.start)
@@ -24,9 +151,12 @@ export default function GameChangeRequest() {
 
   async function handleSubmit(event) {
     event.preventDefault();
-    setSubmissionState("submitting");
 
     const formData = new FormData(formRef.current);
+    const error = validateRequest(changeType, formData);
+    setValidationError(error);
+    if (error) return;
+    setSubmissionState("submitting");
 
     try {
       const response = await fetch("/", {
@@ -43,6 +173,7 @@ export default function GameChangeRequest() {
 
       formRef.current.reset();
       setSelectedGameId("");
+      setChangeType("");
       setSubmissionState("success");
     } catch {
       setSubmissionState("error");
@@ -146,38 +277,48 @@ export default function GameChangeRequest() {
             )}
             <label>
               Type of change <span aria-hidden="true">*</span>
-              <select name="change-type" defaultValue="" required>
+              <select
+                name="change-type"
+                value={changeType}
+                onChange={(event) => {
+                  setChangeType(event.target.value);
+                  setValidationError("");
+                }}
+                aria-describedby="change-type-hint"
+                required
+              >
                 <option value="" disabled>
                   Select a change
                 </option>
-                <option value="date">Date</option>
-                <option value="time">Time</option>
-                <option value="location-or-field">Location or field</option>
-                <option value="other">Other</option>
+                {CHANGE_TYPES.map((type) => (
+                  <option key={type.value} value={type.value}>
+                    {type.label}
+                  </option>
+                ))}
               </select>
             </label>
-            <label>
-              Requested date
-              <input name="requested-date" type="date" />
-            </label>
-            <label>
-              Requested start time
-              <input name="requested-time" type="time" />
-            </label>
-            <label>
-              Requested location
-              <input name="requested-location" type="text" />
-            </label>
-            <label>
-              Requested field
-              <input name="requested-field" type="text" />
-            </label>
+            <p id="change-type-hint" className="change-request-wide">
+              {selectedChangeType
+                ? `${selectedChangeType.hint} Only this field is required.`
+                : "Select a type of change to see the relevant field."}
+            </p>
+            {selectedGame && (
+              <p className="change-request-wide">
+                Current game: {describeGame(selectedGame)}
+              </p>
+            )}
+            <RequestedValueInput changeType={changeType} />
             <label className="change-request-wide">
               Reason or additional details <span aria-hidden="true">*</span>
               <textarea name="reason" rows="4" required />
             </label>
           </div>
 
+          {validationError && (
+            <p className="change-request-error" role="alert">
+              {validationError}
+            </p>
+          )}
           {submissionState === "error" && (
             <p className="change-request-error" role="alert">
               We couldn’t send your request. Please try again later.
