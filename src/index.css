@@ -196,31 +196,6 @@ select {
   gap: 0.4rem;
 }
 
-.change-request-contact {
-  border: 1px solid #c7d2e3;
-  border-radius: 8px;
-  margin: 0;
-  min-width: 0;
-  padding: 1rem;
-}
-
-.change-request-contact legend {
-  color: var(--lp-navy);
-  font-weight: 700;
-  padding: 0 0.35rem;
-}
-
-.change-request-contact > p {
-  color: #526174;
-  margin: 0 0 1rem;
-}
-
-.change-request-contact-fields {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
 .change-request-fields input,
 .change-request-fields select,
 .change-request-fields textarea {
