@@ -81,7 +81,21 @@ export default function Home() {
             role="tab"
             aria-selected={activeTab === "games"}
           >
-            Game Schedule
+            Game Schedule (LP Teams)
+          </button>
+          <button
+            className={activeTab === "master" ? "tab-button active" : "tab-button"}
+            onClick={() => setActiveTab("master")}
+            role="tab"
+            aria-selected={activeTab === "master"}
+          >
+            D66 Master Schedule
+          </button>
+          <button
+            className="tab-button"
+            onClick={() => window.open("/calendar", "_blank", "noopener")}
+          >
+            Calendar View
           </button>
           <button
             className={activeTab === "change-request" ? "tab-button active" : "tab-button"}
@@ -108,6 +122,8 @@ export default function Home() {
             selectedLocation={selectedLocation}
             selectedField={selectedField}
           />
+        ) : activeTab === "master" ? (
+          <GameSchedule master />
         ) : activeTab === "change-request" ? (
           <GameChangeRequest />
         ) : (

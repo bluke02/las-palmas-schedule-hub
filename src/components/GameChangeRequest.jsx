@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import games from "../data/games.json";
+import allGames from "../data/games.json";
 
 function formatDate(date) {
   return new Intl.DateTimeFormat("en-US", {
@@ -28,6 +28,7 @@ const CHANGE_TYPES = [
 const uniqueSorted = (values) =>
   [...new Set(values.filter(Boolean))].sort((a, b) => a.localeCompare(b));
 
+const games = allGames.filter((game) => !game.bye);
 const teams = uniqueSorted(games.flatMap((game) => [game.home, game.away]));
 const locations = uniqueSorted(games.map((game) => game.location));
 const fields = uniqueSorted(games.map((game) => game.field));

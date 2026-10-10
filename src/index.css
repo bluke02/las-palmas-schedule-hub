@@ -440,3 +440,29 @@ button:hover {
     grid-template-columns: 1fr;
   }
 }
+
+.calendar-page { max-width: 1400px; margin: 0 auto; padding: 16px; }
+.calendar-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.calendar-header h1 { margin: 0; color: var(--lp-navy); }
+.calendar-header button:disabled { opacity: 0.4; cursor: not-allowed; }
+.calendar-legend { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; }
+.legend-swatch { width: 14px; height: 14px; border-radius: 3px; display: inline-block; margin-left: 12px; }
+.legend-swatch.game, .calendar-event.game { background: var(--lp-blue); color: #fff; }
+.legend-swatch.practice, .calendar-event.practice { background: #dcebff; color: var(--lp-navy); }
+.calendar-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); border-top: 1px solid #d5dce6; border-left: 1px solid #d5dce6; background: #fff; }
+.calendar-weekday { background: var(--lp-navy); color: #fff; text-align: center; padding: 6px; font-weight: 600; border-right: 1px solid #d5dce6; }
+.calendar-cell { min-height: 120px; padding: 4px; border-right: 1px solid #d5dce6; border-bottom: 1px solid #d5dce6; display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.calendar-cell.empty { background: var(--lp-gray); }
+.calendar-day { font-weight: 700; color: var(--lp-navy); }
+.calendar-event { border: 0; border-radius: 4px; padding: 3px 5px; font-size: 0.72rem; text-align: left; cursor: pointer; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.calendar-event:hover { outline: 2px solid var(--lp-light-blue); }
+.calendar-event-time { font-weight: 700; }
+.calendar-backdrop { position: fixed; inset: 0; background: rgba(8, 43, 99, 0.35); display: flex; align-items: center; justify-content: center; z-index: 10; }
+.calendar-bubble { position: relative; background: #fff; border-radius: 16px; padding: 20px 24px; width: min(420px, 92vw); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); }
+.calendar-bubble h2 { margin: 0 0 4px; color: var(--lp-blue); }
+.calendar-bubble-title { font-weight: 700; margin: 0 0 8px; }
+.calendar-bubble dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; }
+.calendar-bubble dt { font-weight: 600; color: var(--lp-navy); }
+.calendar-bubble dd { margin: 0; }
+.calendar-bubble-close { position: absolute; top: 8px; right: 12px; border: 0; background: none; font-size: 1.5rem; cursor: pointer; }
+@media (max-width: 700px) { .calendar-cell { min-height: 80px; } .calendar-event-time { display: none; } }

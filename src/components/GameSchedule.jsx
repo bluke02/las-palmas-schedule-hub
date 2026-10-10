@@ -18,7 +18,7 @@ function formatRevisionTimestamp(timestamp) {
 }
 
 function timeToMinutes(time) {
-  if (time === "TBD") {
+  if (time === "TBD" || time === "BYE") {
     return Number.MAX_SAFE_INTEGER;
   }
 
@@ -48,12 +48,20 @@ export default function GameSchedule({
   selectedTeam,
   selectedLocation,
   selectedField,
+  master = false,
 }) {
   const selectedTeamName = schedule.find(
     (team) => team.id === selectedTeam
   )?.team;
+  const isLpGame = (game) =>
+    game.home.startsWith("LP") ||
+    game.away.startsWith("LP") ||
+    game.home.startsWith("Las Palmas") ||
+    game.away.startsWith("Las Palmas");
   const gamesForView = games.filter(
     (game) =>
+      master ||
+      (isLpGame(game) &&
       (!selectedProgram ||
         game.division.startsWith(`${selectedProgram} - `) ||
         game.division === selectedProgram) &&
@@ -62,16 +70,19 @@ export default function GameSchedule({
         game.home === selectedTeamName ||
         game.away === selectedTeamName) &&
       (!selectedLocation || game.location === selectedLocation) &&
-      (!selectedField || game.field === selectedField)
+      (!selectedField || game.field === selectedField))
   );
   const sortedGames = sortGames(gamesForView);
 
   return (
     <section className="schedule-overview" aria-labelledby="games-heading">
-      <h2 id="games-heading">Game Schedule</h2>
+      <h2 id="games-heading">
+        {master ? "D66 Master Schedule" : "Game Schedule (LP Teams)"}
+      </h2>
       <p className="schedule-intro">
-        Fall 2026 games sorted by date and start time, with division, field, and
-        location details for every game.
+        {master
+          ? "All league games, including games between non-LP teams, sorted by date and start time."
+          : "Fall 2026 games involving Las Palmas teams, sorted by date and start time, with division, field, and location details."}
       </p>
 
       {sortedGames.length > 0 ? (
@@ -92,13 +103,13 @@ export default function GameSchedule({
               {sortedGames.map((game) => (
                 <tr key={game.id}>
                   <td>{formatDate(game.date)}</td>
-                  <td>{game.start} - {game.end}</td>
+                  <td>{game.bye ? "Bye week" : `${game.start} - ${game.end}`}</td>
                   <td>{game.division}</td>
                   <td>{game.away}</td>
-                  <td>{game.home}</td>
-                  <td>{game.location}</td>
+                  <td>{game.bye ? "BYE" : game.home}</td>
+                  <td>{game.bye ? "—" : game.location}</td>
                   <td>
-                    {game.field}
+                    {game.bye ? "—" : game.field}
                     {gameRevisions[game.id] && (
                       <span className="field-revision">
                         Updated{" "}
