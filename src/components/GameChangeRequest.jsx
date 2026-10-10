@@ -45,6 +45,8 @@ const FIELD_NAMES = {
   other: ["requested-other"],
 };
 
+const ALL_REQUESTED_FIELDS = Object.values(FIELD_NAMES).flat();
+
 const NEAR_PAST_DAYS = 7;
 
 function isValidDate(value) {
