@@ -169,6 +169,81 @@ select {
   margin-top: -0.5rem;
 }
 
+.change-request {
+  margin-top: 1.5rem;
+}
+
+.change-request-form {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(8, 43, 99, 0.08);
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+}
+
+.change-request-fields {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 1.25rem;
+}
+
+.change-request-fields label {
+  color: var(--lp-navy);
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  gap: 0.4rem;
+}
+
+.change-request-fields input,
+.change-request-fields select,
+.change-request-fields textarea {
+  background: white;
+  border: 1px solid #c7d2e3;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font: inherit;
+  min-width: 0;
+  padding: 0.75rem;
+  width: 100%;
+}
+
+.change-request-fields textarea {
+  resize: vertical;
+}
+
+.change-request-wide {
+  grid-column: 1 / -1;
+}
+
+.change-request-honeypot {
+  display: none;
+}
+
+.change-request-status,
+.change-request-error {
+  border-radius: 8px;
+  line-height: 1.5;
+  margin: 1.5rem 0 0;
+  padding: 1rem;
+}
+
+.change-request-status {
+  background: #eaf7ee;
+  color: #176b35;
+}
+
+.change-request-error {
+  background: #fff1f0;
+  color: #a12622;
+}
+
+.change-request-form button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
 .field-schedules {
   display: grid;
   gap: 1.5rem;
@@ -321,5 +396,17 @@ button:hover {
 
   .card {
     padding: 1rem;
+  }
+
+  .change-request-form {
+    padding: 1rem;
+  }
+
+  .change-request-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .change-request-wide {
+    grid-column: auto;
   }
 }

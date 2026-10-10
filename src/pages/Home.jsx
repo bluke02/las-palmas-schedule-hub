@@ -3,6 +3,7 @@ import TeamFinder from "../components/TeamFinder";
 import ScheduleOverview from "../components/ScheduleOverview";
 import MakeupSlots from "../components/MakeupSlots";
 import GameSchedule from "../components/GameSchedule";
+import GameChangeRequest from "../components/GameChangeRequest";
 import ShareSchedule from "../components/ShareSchedule";
 
 export default function Home() {
@@ -82,6 +83,14 @@ export default function Home() {
           >
             Game Schedule
           </button>
+          <button
+            className={activeTab === "change-request" ? "tab-button active" : "tab-button"}
+            onClick={() => setActiveTab("change-request")}
+            role="tab"
+            aria-selected={activeTab === "change-request"}
+          >
+            Request a Change
+          </button>
         </div>
 
         {activeTab === "schedule" ? (
@@ -99,6 +108,8 @@ export default function Home() {
             selectedLocation={selectedLocation}
             selectedField={selectedField}
           />
+        ) : activeTab === "change-request" ? (
+          <GameChangeRequest />
         ) : (
           <MakeupSlots />
         )}
