@@ -45,18 +45,6 @@ const FIELD_NAMES = {
   other: ["requested-other"],
 };
 
-const ALL_REQUESTED_FIELDS = [
-  "requested-date",
-  "requested-start-time",
-  "requested-end-time",
-  "requested-home",
-  "requested-away",
-  "requested-location",
-  "requested-field",
-  "requested-division",
-  "requested-other",
-];
-
 const NEAR_PAST_DAYS = 7;
 
 function isValidDate(value) {
@@ -164,6 +152,8 @@ export default function GameChangeRequest() {
   const [changeType, setChangeType] = useState("");
   const [validationError, setValidationError] = useState("");
   const [submissionState, setSubmissionState] = useState("idle");
+  const [submissionError, setSubmissionError] = useState("");
+  const [issueUrl, setIssueUrl] = useState("");
   const formRef = useRef(null);
   const selectedChangeType = CHANGE_TYPES.find((type) => type.value === changeType);
   const selectedGame = games.find((game) => game.id === selectedGameId);
@@ -178,38 +168,77 @@ export default function GameChangeRequest() {
     const error = validateRequest(changeType, formData);
     setValidationError(error);
     if (error) return;
+    setSubmissionError("");
     setSubmissionState("submitting");
 
+    let privateDetailsSaved = false;
     try {
-      // Ensure all requested-* fields are present (empty if not used)
-      const completeFormData = new URLSearchParams();
+      const requestId = crypto.randomUUID();
+      const netlifyFormData = new URLSearchParams();
       formData.forEach((value, key) => {
-        completeFormData.append(key, value);
+        netlifyFormData.append(key, value);
       });
-      // Add empty values for unused requested-* fields
+      netlifyFormData.set("form-name", "game-change-request");
+      netlifyFormData.set("request-id", requestId);
+      netlifyFormData.set("change-type", changeType);
+      netlifyFormData.set("game-details", describeGame(selectedGame));
       ALL_REQUESTED_FIELDS.forEach((field) => {
-        if (!completeFormData.has(field)) {
-          completeFormData.append(field, "");
+        if (!netlifyFormData.has(field)) {
+          netlifyFormData.append(field, "");
         }
       });
 
-      const response = await fetch("/", {
+      const formResponse = await fetch("/", {
         method: "POST",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
         },
-        body: completeFormData.toString(),
+        body: netlifyFormData.toString(),
+      });
+      if (!formResponse.ok) {
+        throw new Error("Your request details could not be saved. Please try again.");
+      }
+      privateDetailsSaved = true;
+
+      const response = await fetch("/.netlify/functions/create-change-request", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          game: selectedGameId,
+          changeType,
+          requestedValue: formData.get(FIELD_NAMES[changeType][0]),
+          team: formData.get("team"),
+          reason: formData.get("reason"),
+          requestId,
+          botField: formData.get("bot-field"),
+        }),
       });
 
+      const result = await response.json().catch(() => null);
       if (!response.ok) {
-        throw new Error("Request submission failed");
+        throw new Error(
+          result?.error || "We couldn't send your request. Please try again later."
+        );
+      }
+      if (typeof result?.issueUrl !== "string") {
+        throw new Error("The review issue could not be confirmed. Please try again later.");
       }
 
       formRef.current.reset();
       setSelectedGameId("");
       setChangeType("");
+      setIssueUrl(result.issueUrl);
       setSubmissionState("success");
-    } catch {
+    } catch (error) {
+      setSubmissionError(
+        privateDetailsSaved
+          ? "Your contact details were saved privately, but the review issue couldn't be created. Please try again; the private submission is available in Netlify Forms."
+          : error instanceof Error
+            ? error.message
+            : "We couldn't send your request. Please try again later."
+      );
       setSubmissionState("error");
     }
   }
@@ -218,14 +247,16 @@ export default function GameChangeRequest() {
     <section className="change-request" aria-labelledby="change-request-heading">
       <h2 id="change-request-heading">Request a Game Schedule Change</h2>
       <p className="schedule-intro">
-        Tell us which game needs an adjustment and what you're requesting.
-        We'll use your contact information to verify the request before
-        approval. Submitting a request does not automatically change the schedule.
+        Your schedule request will be created as a public GitHub issue for
+        review. Your name and contact details are kept in Netlify Forms and
+        are not included in the public issue. Submitting a request does not
+        automatically change the schedule.
       </p>
 
       {submissionState === "success" ? (
         <p className="change-request-status" role="status">
-          Thank you. Your request has been sent for review.
+          Your request has been sent for review.{" "}
+          <a href={issueUrl}>View the GitHub issue</a>
         </p>
       ) : (
         <form
@@ -237,22 +268,23 @@ export default function GameChangeRequest() {
           data-netlify-honeypot="bot-field"
           onSubmit={handleSubmit}
         >
-          <input
-            type="hidden"
-            name="form-name"
-            value="game-change-request"
-          />
+          <input type="hidden" name="form-name" value="game-change-request" />
+          <input type="hidden" name="request-id" value="" />
+          <input type="hidden" name="game-details" value="" />
           <p className="change-request-honeypot">
             <label>
-              Leave this field blank
-              <input name="bot-field" />
+              Leave this field empty
+              <input name="bot-field" tabIndex="-1" autoComplete="off" />
             </label>
           </p>
 
           <div className="change-request-fields">
             <fieldset className="change-request-contact change-request-wide">
               <legend>Contact Information</legend>
-              <p>Required so we can follow up to validate your request.</p>
+              <p>
+                Your name and contact details are stored privately in Netlify
+                Forms so the schedule administrator can validate your request.
+              </p>
               <div className="change-request-contact-fields">
                 <label>
                   Your name <span aria-hidden="true">*</span>
@@ -284,7 +316,7 @@ export default function GameChangeRequest() {
             </fieldset>
             <label>
               Team
-              <input name="team" type="text" />
+              <input name="team" type="text" maxLength={100} />
             </label>
             <label className="change-request-wide">
               Game to change <span aria-hidden="true">*</span>
@@ -302,13 +334,6 @@ export default function GameChangeRequest() {
                 ))}
               </select>
             </label>
-            {selectedGame && (
-              <input
-                type="hidden"
-                name="game-details"
-                value={describeGame(selectedGame)}
-              />
-            )}
             <label>
               Type of change <span aria-hidden="true">*</span>
               <select
@@ -344,7 +369,7 @@ export default function GameChangeRequest() {
             <RequestedValueInput changeType={changeType} />
             <label className="change-request-wide">
               Reason or additional details <span aria-hidden="true">*</span>
-              <textarea name="reason" rows="4" required />
+              <textarea name="reason" rows="4" maxLength={2000} required />
             </label>
           </div>
 
@@ -355,7 +380,7 @@ export default function GameChangeRequest() {
           )}
           {submissionState === "error" && (
             <p className="change-request-error" role="alert">
-              We couldn't send your request. Please try again later.
+              {submissionError}
             </p>
           )}
           <button type="submit" disabled={submissionState === "submitting"}>
