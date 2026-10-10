@@ -23,6 +23,8 @@ const OPTION_VALUES = {
 const MAX_BODY_LENGTH = 10_000;
 const MAX_REASON_LENGTH = 2_000;
 const NEAR_PAST_DAYS = 7;
+const REQUEST_ID_PATTERN =
+  /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 
 function response(statusCode, body) {
   return {
@@ -86,6 +88,12 @@ function getRequestError(payload) {
   if (typeof payload.botField === "string" && payload.botField.trim()) {
     return "Please submit a valid change request.";
   }
+  if (
+    typeof payload.requestId !== "string" ||
+    !REQUEST_ID_PATTERN.test(payload.requestId)
+  ) {
+    return "Please submit a valid change request.";
+  }
   if (typeof payload.game !== "string" || !games.some((game) => game.id === payload.game)) {
     return "Choose a game from the schedule.";
   }
@@ -141,7 +149,7 @@ function getRequestError(payload) {
   return "";
 }
 
-function createIssueBody(game, changeType, requestedValue, team, reason) {
+function createIssueBody(game, changeType, requestedValue, team, reason, requestId) {
   const gameDetails = [
     game.date,
     `${game.start} - ${game.end}`,
@@ -156,6 +164,8 @@ function createIssueBody(game, changeType, requestedValue, team, reason) {
     "## Review",
     "- [ ] Approve and open a pull request with the schedule update",
     "- [ ] Decline and close this issue",
+    "",
+    `Private contact details are stored in Netlify Forms under request ID \`${requestId}\`.`,
     "",
     "## Scheduled game",
     codeBlock(gameDetails),
@@ -225,8 +235,10 @@ export const handler = async (event) => {
             changeType,
             body.requestedValue.trim(),
             body.team || "",
-            body.reason
+            body.reason,
+            body.requestId
           ),
+          assignees: ["bluke02"],
         }),
       },
     );

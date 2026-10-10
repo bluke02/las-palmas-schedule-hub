@@ -171,7 +171,35 @@ export default function GameChangeRequest() {
     setSubmissionError("");
     setSubmissionState("submitting");
 
+    let privateDetailsSaved = false;
     try {
+      const requestId = crypto.randomUUID();
+      const netlifyFormData = new URLSearchParams();
+      formData.forEach((value, key) => {
+        netlifyFormData.append(key, value);
+      });
+      netlifyFormData.set("form-name", "game-change-request");
+      netlifyFormData.set("request-id", requestId);
+      netlifyFormData.set("change-type", changeType);
+      netlifyFormData.set("game-details", describeGame(selectedGame));
+      ALL_REQUESTED_FIELDS.forEach((field) => {
+        if (!netlifyFormData.has(field)) {
+          netlifyFormData.append(field, "");
+        }
+      });
+
+      const formResponse = await fetch("/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: netlifyFormData.toString(),
+      });
+      if (!formResponse.ok) {
+        throw new Error("Your request details could not be saved. Please try again.");
+      }
+      privateDetailsSaved = true;
+
       const response = await fetch("/.netlify/functions/create-change-request", {
         method: "POST",
         headers: {
@@ -183,6 +211,7 @@ export default function GameChangeRequest() {
           requestedValue: formData.get(FIELD_NAMES[changeType][0]),
           team: formData.get("team"),
           reason: formData.get("reason"),
+          requestId,
           botField: formData.get("bot-field"),
         }),
       });
@@ -204,9 +233,11 @@ export default function GameChangeRequest() {
       setSubmissionState("success");
     } catch (error) {
       setSubmissionError(
-        error instanceof Error
-          ? error.message
-          : "We couldn't send your request. Please try again later."
+        privateDetailsSaved
+          ? "Your contact details were saved privately, but the review issue couldn't be created. Please try again; the private submission is available in Netlify Forms."
+          : error instanceof Error
+            ? error.message
+            : "We couldn't send your request. Please try again later."
       );
       setSubmissionState("error");
     }
@@ -216,9 +247,10 @@ export default function GameChangeRequest() {
     <section className="change-request" aria-labelledby="change-request-heading">
       <h2 id="change-request-heading">Request a Game Schedule Change</h2>
       <p className="schedule-intro">
-        Submit a schedule change for review as a public GitHub issue. Do not
-        include private or sensitive information. Submitting a request does
-        not automatically change the schedule.
+        Your schedule request will be created as a public GitHub issue for
+        review. Your name and contact details are kept in Netlify Forms and
+        are not included in the public issue. Submitting a request does not
+        automatically change the schedule.
       </p>
 
       {submissionState === "success" ? (
@@ -230,8 +262,15 @@ export default function GameChangeRequest() {
         <form
           ref={formRef}
           className="change-request-form"
+          name="game-change-request"
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
           onSubmit={handleSubmit}
         >
+          <input type="hidden" name="form-name" value="game-change-request" />
+          <input type="hidden" name="request-id" value="" />
+          <input type="hidden" name="game-details" value="" />
           <p className="change-request-honeypot">
             <label>
               Leave this field empty
@@ -240,6 +279,41 @@ export default function GameChangeRequest() {
           </p>
 
           <div className="change-request-fields">
+            <fieldset className="change-request-contact change-request-wide">
+              <legend>Contact Information</legend>
+              <p>
+                Your name and contact details are stored privately in Netlify
+                Forms so the schedule administrator can validate your request.
+              </p>
+              <div className="change-request-contact-fields">
+                <label>
+                  Your name <span aria-hidden="true">*</span>
+                  <input
+                    name="requester-name"
+                    type="text"
+                    autoComplete="name"
+                    required
+                  />
+                </label>
+                <label>
+                  Email <span aria-hidden="true">*</span>
+                  <input
+                    name="requester-email"
+                    type="email"
+                    autoComplete="email"
+                    required
+                  />
+                </label>
+                <label>
+                  Phone (optional)
+                  <input
+                    name="requester-phone"
+                    type="tel"
+                    autoComplete="tel"
+                  />
+                </label>
+              </div>
+            </fieldset>
             <label>
               Team
               <input name="team" type="text" maxLength={100} />
