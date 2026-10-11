@@ -237,7 +237,7 @@ export default function GameChangeRequest() {
     } catch (error) {
       setSubmissionError(
         privateDetailsSaved
-          ? "Your contact details were saved privately, but the review issue couldn't be created. Please try again; the private submission is available in Netlify Forms."
+          ? `${error instanceof Error ? error.message : "The review issue couldn't be created."} Your contact details were saved privately in Netlify Forms.`
           : error instanceof Error
             ? error.message
             : "We couldn't send your request. Please try again later."
