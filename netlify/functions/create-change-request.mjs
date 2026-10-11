@@ -189,11 +189,11 @@ export const handler = async (event) => {
     return response(403, { error: "This request must come from the schedule site." });
   }
 
-  if (!process.env.GITHUB_TOKEN) {
-    console.error("GITHUB_TOKEN is not configured for the change-request function.");
+  if (!process.env.SCHEDULE_CHANGE) {
+    console.error("SCHEDULE_CHANGE is not configured for the change-request function.");
     return response(503, {
       error:
-        "GitHub issue creation is not configured. Add GITHUB_TOKEN to the Netlify environment variables, then redeploy.",
+        "GitHub issue creation is not configured. Add SCHEDULE_CHANGE to the Netlify environment variables, then redeploy.",
     });
   }
 
@@ -224,7 +224,7 @@ export const handler = async (event) => {
         method: "POST",
         headers: {
           Accept: "application/vnd.github+json",
-          Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+          Authorization: `Bearer ${process.env.SCHEDULE_CHANGE}`,
           "Content-Type": "application/json",
           "User-Agent": "Las-Palmas-Schedule-Hub",
           "X-GitHub-Api-Version": "2022-11-28",
@@ -268,7 +268,7 @@ export const handler = async (event) => {
 
     const errorMessage =
       githubResponse.status === 401
-        ? "GitHub rejected the configured token. Check that GITHUB_TOKEN is valid and has Issues read/write permission."
+        ? "GitHub rejected the configured token. Check that SCHEDULE_CHANGE is valid and has Issues read/write permission."
         : githubResponse.status === 403
           ? "GitHub denied issue creation. Check the token's repository access and Issues permission; GitHub may also be rate-limiting requests."
           : githubResponse.status === 404
