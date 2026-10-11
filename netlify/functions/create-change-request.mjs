@@ -189,10 +189,11 @@ export const handler = async (event) => {
     return response(403, { error: "This request must come from the schedule site." });
   }
 
-  if (!process.env.GITHUB_TOKEN) {
-    console.error("GITHUB_TOKEN is not configured for the change-request function.");
+  if (!process.env.SCHEDULE_CHANGE) {
+    console.error("SCHEDULE_CHANGE is not configured for the change-request function.");
     return response(503, {
-      error: "The request service is not configured. Please try again later.",
+      error:
+        "GitHub issue creation is not configured. Add SCHEDULE_CHANGE to the Netlify environment variables, then redeploy.",
     });
   }
 
@@ -223,7 +224,7 @@ export const handler = async (event) => {
         method: "POST",
         headers: {
           Accept: "application/vnd.github+json",
-          Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+          Authorization: `Bearer ${process.env.SCHEDULE_CHANGE}`,
           "Content-Type": "application/json",
           "User-Agent": "Las-Palmas-Schedule-Hub",
           "X-GitHub-Api-Version": "2022-11-28",
@@ -253,9 +254,30 @@ export const handler = async (event) => {
   }
 
   if (!githubResponse.ok) {
-    console.error("GitHub issue creation failed with status", githubResponse.status);
+    let githubError;
+    try {
+      githubError = await githubResponse.json();
+    } catch {
+      githubError = null;
+    }
+    console.error("GitHub issue creation failed:", {
+      status: githubResponse.status,
+      message: githubError?.message || "No error message returned",
+      errors: githubError?.errors,
+    });
+
+    const errorMessage =
+      githubResponse.status === 401
+        ? "GitHub rejected the configured token. Check that SCHEDULE_CHANGE is valid and has Issues read/write permission."
+        : githubResponse.status === 403
+          ? "GitHub denied issue creation. Check the token's repository access and Issues permission; GitHub may also be rate-limiting requests."
+          : githubResponse.status === 404
+            ? "GitHub could not access this repository with the configured token. Check its repository access."
+            : githubResponse.status === 422
+              ? "GitHub rejected the issue details or assignee. Check the repository's issue settings and assignee access."
+              : "GitHub could not create the review issue. Check the Netlify function logs for details.";
     return response(502, {
-      error: "GitHub could not create the review issue. Please try again later.",
+      error: errorMessage,
     });
   }
 
