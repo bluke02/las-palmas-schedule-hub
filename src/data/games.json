@@ -2551,8 +2551,8 @@
   },
   {
     "id": "d66-2026-10-30-01",
-    "date": "2026-10-30",
-    "day": "Friday",
+    "date": "2026-11-02",
+    "day": "Monday",
     "start": "6:00 PM",
     "end": "7:30 PM",
     "division": "Baseball - Minors B",
@@ -2561,8 +2561,7 @@
     "hostLeague": "Las Palmas",
     "location": "Las Palmas",
     "field": "West Field",
-    "rawDivision": "Minor B",
-    "notes": "Friday Minor B"
+    "rawDivision": "Minor B"
   },
   {
     "id": "d66-2026-10-30-02",
