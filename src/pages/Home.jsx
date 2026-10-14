@@ -5,6 +5,10 @@ import MakeupSlots from "../components/MakeupSlots";
 import GameSchedule from "../components/GameSchedule";
 import GameChangeRequest from "../components/GameChangeRequest";
 import ShareSchedule from "../components/ShareSchedule";
+import gameRevisions from "../data/gameRevisions.json";
+import { getLatestScheduleRevision } from "../utils/scheduleRevision";
+
+const latestScheduleRevision = getLatestScheduleRevision(gameRevisions);
 
 export default function Home() {
   const [selectedProgram, setSelectedProgram] = useState("");
@@ -30,6 +34,17 @@ export default function Home() {
           team information, and field assignments.
         </p>
         <ShareSchedule />
+        {latestScheduleRevision && (
+          <p className="schedule-last-updated">
+            Schedule last updated{" "}
+            <time dateTime={latestScheduleRevision}>
+              {new Intl.DateTimeFormat("en-US", {
+                dateStyle: "medium",
+                timeStyle: "short",
+              }).format(new Date(latestScheduleRevision))}
+            </time>
+          </p>
+        )}
       </section>
 
       <div className="container">
