@@ -8,7 +8,12 @@ import ShareSchedule from "../components/ShareSchedule";
 import gameRevisions from "../data/gameRevisions.json";
 import { getLatestScheduleRevision } from "../utils/scheduleRevision";
 
-const latestScheduleRevision = getLatestScheduleRevision(gameRevisions);
+const commitTimestamp =
+  typeof __COMMIT_TIMESTAMP__ === "undefined" ? null : __COMMIT_TIMESTAMP__;
+const latestScheduleRevision = getLatestScheduleRevision({
+  ...gameRevisions,
+  ...(commitTimestamp ? { commit: commitTimestamp } : {}),
+});
 
 export default function Home() {
   const [selectedProgram, setSelectedProgram] = useState("");
