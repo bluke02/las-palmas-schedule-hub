@@ -5,6 +5,9 @@ import test from "node:test";
 const games = JSON.parse(
   await readFile(new URL("../src/data/games.json", import.meta.url), "utf8")
 );
+const gameRevisions = JSON.parse(
+  await readFile(new URL("../src/data/gameRevisions.json", import.meta.url), "utf8")
+);
 
 test("Oct 16 Minors B away teams are swapped between the two field games", () => {
   const fieldsByGameId = Object.fromEntries(
@@ -78,5 +81,12 @@ test("Oct 16 7:45 PM West Field game has the replacement teams", () => {
       location: "Las Palmas",
       field: "West Field",
     }
+  );
+});
+
+test("Oct 16 West Field game revision timestamp reflects the latest change", () => {
+  assert.equal(
+    gameRevisions["optional-friday-seniors-2026-10-16"],
+    "2026-10-14T13:03:00-07:00"
   );
 });
