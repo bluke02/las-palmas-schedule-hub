@@ -51,3 +51,32 @@ test("Oct 16 Minors B away teams are swapped between the two field games", () =>
     }
   );
 });
+
+test("Oct 16 7:45 PM West Field game has the replacement teams", () => {
+  const game = games.find(
+    (entry) => entry.id === "optional-friday-seniors-2026-10-16"
+  );
+
+  assert.deepEqual(
+    {
+      date: game.date,
+      start: game.start,
+      end: game.end,
+      division: game.division,
+      away: game.away,
+      home: game.home,
+      location: game.location,
+      field: game.field,
+    },
+    {
+      date: "2026-10-16",
+      start: "7:45 PM",
+      end: "9:15 PM",
+      division: "Softball - Seniors",
+      away: "Cherry Bombs",
+      home: "LP Diamond Girls - Lugo",
+      location: "Las Palmas",
+      field: "West Field",
+    }
+  );
+});
