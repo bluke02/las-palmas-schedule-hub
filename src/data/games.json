@@ -1702,7 +1702,7 @@
     "start": "6:00 PM",
     "end": "7:30 PM",
     "division": "Baseball - Minors B",
-    "away": "LP Thunderbolts - Silva/Dager",
+    "away": "LP Heavy Hitters - Covarrubias",
     "home": "LP Red Tails Minors B - Gomez",
     "hostLeague": "Las Palmas",
     "location": "Las Palmas",
@@ -1892,21 +1892,6 @@
     "field": "Minors Field",
     "rawDivision": "CAPS",
     "notes": "Full-league away day for Encanto"
-  },
-  {
-    "id": "d66-2026-10-17-07",
-    "date": "2026-10-17",
-    "day": "Saturday",
-    "start": "10:15 AM",
-    "end": "11:45 AM",
-    "division": "Baseball - Minors B",
-    "away": "LP Heavy Hitters - Covarrubias",
-    "home": "SDA CAPS",
-    "hostLeague": "SDA",
-    "location": "SDA",
-    "field": "T-Ball Field",
-    "rawDivision": "Minor B",
-    "notes": "SDA CAPS is home at SDA"
   },
   {
     "id": "sb-2026-10-17-04",

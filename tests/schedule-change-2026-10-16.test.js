@@ -9,7 +9,7 @@ const gameRevisions = JSON.parse(
   await readFile(new URL("../src/data/gameRevisions.json", import.meta.url), "utf8")
 );
 
-test("Oct 16 Minors B away teams are swapped between the two field games", () => {
+test("Oct 16 Minors B West Field away team is LP Heavy Hitters", () => {
   const fieldsByGameId = Object.fromEntries(
     games
       .filter((game) =>
@@ -29,7 +29,7 @@ test("Oct 16 Minors B away teams are swapped between the two field games", () =>
       ],
     },
     {
-      away: "LP Thunderbolts - Silva/Dager",
+      away: "LP Heavy Hitters - Covarrubias",
       home: "LP Red Tails Minors B - Gomez",
       field: "West Field",
       time: ["6:00 PM", "7:30 PM"],
@@ -88,5 +88,12 @@ test("Oct 16 West Field game revision timestamp reflects the latest change", () 
   assert.equal(
     gameRevisions["optional-friday-seniors-2026-10-16"],
     "2026-10-14T13:03:00-07:00"
+  );
+});
+
+test("Oct 16 Minors B game revision timestamp reflects the latest change", () => {
+  assert.equal(
+    gameRevisions["d66-2026-10-16-01"],
+    "2026-10-15T22:02:40Z"
   );
 });
