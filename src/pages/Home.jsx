@@ -5,6 +5,16 @@ import MakeupSlots from "../components/MakeupSlots";
 import GameSchedule from "../components/GameSchedule";
 import GameChangeRequest from "../components/GameChangeRequest";
 import ShareSchedule from "../components/ShareSchedule";
+import gameRevisions from "../data/gameRevisions.json";
+import { getLatestGameRevision } from "../utils/gameRevisions";
+
+const latestGameRevision = getLatestGameRevision(gameRevisions);
+const formattedLatestGameRevision = latestGameRevision
+  ? new Intl.DateTimeFormat("en-US", {
+      dateStyle: "medium",
+      timeStyle: "short",
+    }).format(new Date(latestGameRevision))
+  : null;
 
 export default function Home() {
   const [selectedProgram, setSelectedProgram] = useState("");
@@ -29,6 +39,14 @@ export default function Home() {
           Fall 2026 practice and game schedules,
           team information, and field assignments.
         </p>
+        {latestGameRevision && (
+          <p className="schedule-last-updated">
+            Schedule last updated{" "}
+            <time dateTime={latestGameRevision}>
+              {formattedLatestGameRevision}
+            </time>
+          </p>
+        )}
         <ShareSchedule />
       </section>
 

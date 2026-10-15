@@ -70,6 +70,10 @@ h1 {
   line-height: 1.35;
 }
 
+.hero .schedule-last-updated {
+  margin-top: 0.35rem;
+}
+
 .share-schedule {
   align-items: center;
   display: flex;

@@ -16,3 +16,10 @@ permission, then add it to the Netlify site's environment variables as
 the variable. The function returns an error instead of creating an issue if
 the token is missing or GitHub rejects the request. Issues are assigned to
 `bluke02` for review.
+
+## Schedule revision timestamps
+
+When changing or adding a game in `src/data/games.json`, add or update that
+game's timestamp in `src/data/gameRevisions.json`. The timestamp must be valid
+ISO 8601 and later than the prior timestamp. Pull requests targeting `main` run
+the timestamp check and the test suite.
