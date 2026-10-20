@@ -2243,7 +2243,7 @@
     "end": "11:00 AM",
     "division": "Baseball - Majors",
     "away": "TH Majors",
-    "home": "SC Majors",
+    "home": "SDA Majors",
     "hostLeague": "Southcrest",
     "location": "Southcrest",
     "field": "Major Field",
@@ -2503,22 +2503,6 @@
     "location": "South Bay",
     "field": "SBLL Field 4",
     "rawDivision": "Seniors"
-  },
-  {
-    "id": "d66-2026-10-24-12",
-    "date": "2026-10-24",
-    "day": "Saturday",
-    "start": "BYE",
-    "end": "",
-    "division": "Baseball - Majors",
-    "away": "SDA Majors",
-    "home": "BYE",
-    "hostLeague": "",
-    "location": "",
-    "field": "",
-    "rawDivision": "Majors",
-    "bye": true,
-    "notes": "Rotating Majors bye"
   },
   {
     "id": "sb-2026-10-28-01",
@@ -2915,22 +2899,6 @@
     "rawDivision": "Seniors"
   },
   {
-    "id": "d66-2026-10-31-12",
-    "date": "2026-10-31",
-    "day": "Saturday",
-    "start": "BYE",
-    "end": "",
-    "division": "Baseball - Majors",
-    "away": "SC Majors",
-    "home": "BYE",
-    "hostLeague": "",
-    "location": "",
-    "field": "",
-    "rawDivision": "Majors",
-    "bye": true,
-    "notes": "Rotating Majors bye"
-  },
-  {
     "id": "d66-2026-11-06-01",
     "date": "2026-11-06",
     "day": "Friday",
@@ -3136,13 +3104,13 @@
     "start": "10:45 AM",
     "end": "12:45 PM",
     "division": "Baseball - Majors",
-    "away": "SC Majors",
+    "away": "TH Majors",
     "home": "LP Coyotes - Rodriguez",
     "hostLeague": "Las Palmas",
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Majors",
-    "notes": "Full-league away day for Southcrest"
+    "notes": "Full-league away day for Twin Hills"
   },
   {
     "id": "tee-ball-24",
@@ -3329,22 +3297,6 @@
     "rawDivision": "Seniors"
   },
   {
-    "id": "d66-2026-11-07-12",
-    "date": "2026-11-07",
-    "day": "Saturday",
-    "start": "BYE",
-    "end": "",
-    "division": "Baseball - Majors",
-    "away": "TH Majors",
-    "home": "BYE",
-    "hostLeague": "",
-    "location": "",
-    "field": "",
-    "rawDivision": "Majors",
-    "bye": true,
-    "notes": "Rotating Majors bye"
-  },
-  {
     "id": "d66-2026-11-13-01",
     "date": "2026-11-13",
     "day": "Friday",
@@ -3467,7 +3419,7 @@
     "end": "11:00 AM",
     "division": "Baseball - Majors",
     "away": "LP Dirtbags - Ybarra",
-    "home": "SC Majors",
+    "home": "LP Coyotes - Rodriguez",
     "hostLeague": "Southcrest",
     "location": "Southcrest",
     "field": "Major Field",
@@ -3741,22 +3693,6 @@
     "rawDivision": "Seniors"
   },
   {
-    "id": "d66-2026-11-14-12",
-    "date": "2026-11-14",
-    "day": "Saturday",
-    "start": "BYE",
-    "end": "",
-    "division": "Baseball - Majors",
-    "away": "LP Coyotes - Rodriguez",
-    "home": "BYE",
-    "hostLeague": "",
-    "location": "",
-    "field": "",
-    "rawDivision": "Majors",
-    "bye": true,
-    "notes": "Rotating Majors bye"
-  },
-  {
     "id": "d66-2026-11-20-01",
     "date": "2026-11-20",
     "day": "Friday",
@@ -3894,7 +3830,7 @@
     "end": "11:00 AM",
     "division": "Baseball - Majors",
     "away": "SDA Majors",
-    "home": "SC Majors",
+    "home": "LP Dirtbags - Ybarra",
     "hostLeague": "Southcrest",
     "location": "Southcrest",
     "field": "Major Field",
@@ -4055,21 +3991,5 @@
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Minors"
-  },
-  {
-    "id": "d66-2026-11-21-12",
-    "date": "2026-11-21",
-    "day": "Saturday",
-    "start": "BYE",
-    "end": "",
-    "division": "Baseball - Majors",
-    "away": "LP Dirtbags - Ybarra",
-    "home": "BYE",
-    "hostLeague": "",
-    "location": "",
-    "field": "",
-    "rawDivision": "Majors",
-    "bye": true,
-    "notes": "Rotating Majors bye"
   }
 ]
