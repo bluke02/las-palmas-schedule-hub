@@ -2550,10 +2550,10 @@
   },
   {
     "id": "d66-2026-10-30-02",
-    "date": "2026-10-30",
-    "day": "Friday",
-    "start": "6:00 PM",
-    "end": "7:30 PM",
+    "date": "2026-10-29",
+    "day": "Thursday",
+    "start": "5:30 PM",
+    "end": "7:00 PM",
     "division": "Baseball - Minors B",
     "away": "LP Heavy Hitters - Covarrubias",
     "home": "LP Red Tails Minors B - Gomez",
@@ -2562,19 +2562,6 @@
     "field": "East Field",
     "rawDivision": "Minor B",
     "notes": "Friday Minor B"
-  },
-  {
-    "id": "optional-friday-seniors-2026-10-30",
-    "date": "2026-10-30",
-    "day": "Friday",
-    "start": "7:45 PM",
-    "end": "9:15 PM",
-    "division": "Softball - Seniors",
-    "away": "LP Fabulosas - Masino",
-    "home": "LP Violent Vipers - Trinidad",
-    "location": "Las Palmas",
-    "field": "West Field",
-    "rawDivision": "Seniors"
   },
   {
     "id": "tee-ball-19",
