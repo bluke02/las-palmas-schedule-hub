@@ -2549,6 +2549,21 @@
     "rawDivision": "Minor B"
   },
   {
+    "id": "d66-2026-10-30-02",
+    "date": "2026-10-29",
+    "day": "Thursday",
+    "start": "5:30 PM",
+    "end": "7:00 PM",
+    "division": "Baseball - Minors B",
+    "away": "LP Heavy Hitters - Covarrubias",
+    "home": "LP Red Tails Minors B - Gomez",
+    "hostLeague": "Las Palmas",
+    "location": "Las Palmas",
+    "field": "East Field",
+    "rawDivision": "Minor B",
+    "notes": "Friday Minor B"
+  },
+  {
     "id": "tee-ball-19",
     "date": "2026-10-31",
     "day": "Saturday",
