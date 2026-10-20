@@ -1,6 +1,7 @@
 import games from "../data/games.json";
 import gameRevisions from "../data/gameRevisions.json";
 import schedule from "../data/schedule.json";
+import { filterGamesForSchedule } from "../utils/gameSchedule.js";
 
 function formatDate(date) {
   return new Intl.DateTimeFormat("en-US", {
@@ -53,25 +54,14 @@ export default function GameSchedule({
   const selectedTeamName = schedule.find(
     (team) => team.id === selectedTeam
   )?.team;
-  const isLpGame = (game) =>
-    game.home.startsWith("LP") ||
-    game.away.startsWith("LP") ||
-    game.home.startsWith("Las Palmas") ||
-    game.away.startsWith("Las Palmas");
-  const gamesForView = games.filter(
-    (game) =>
-      master ||
-      (isLpGame(game) &&
-      (!selectedProgram ||
-        game.division.startsWith(`${selectedProgram} - `) ||
-        game.division === selectedProgram) &&
-      (!selectedDivision || game.division === selectedDivision) &&
-      (!selectedTeamName ||
-        game.home === selectedTeamName ||
-        game.away === selectedTeamName) &&
-      (!selectedLocation || game.location === selectedLocation) &&
-      (!selectedField || game.field === selectedField))
-  );
+  const gamesForView = filterGamesForSchedule(games, {
+    selectedProgram,
+    selectedDivision,
+    selectedTeamName,
+    selectedLocation,
+    selectedField,
+    master,
+  });
   const sortedGames = sortGames(gamesForView);
 
   return (

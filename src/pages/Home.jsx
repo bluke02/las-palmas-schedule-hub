@@ -141,7 +141,14 @@ export default function Home() {
             selectedField={selectedField}
           />
         ) : activeTab === "master" ? (
-          <GameSchedule master />
+          <GameSchedule
+            master
+            selectedProgram={selectedProgram}
+            selectedDivision={selectedDivision}
+            selectedTeam={selectedTeam}
+            selectedLocation={selectedLocation}
+            selectedField={selectedField}
+          />
         ) : activeTab === "change-request" ? (
           <GameChangeRequest />
         ) : (
