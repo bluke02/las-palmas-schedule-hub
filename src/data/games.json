@@ -2137,19 +2137,6 @@
     "notes": "Friday Minor B"
   },
   {
-    "id": "optional-friday-seniors-2026-10-23",
-    "date": "2026-10-23",
-    "day": "Friday",
-    "start": "7:45 PM",
-    "end": "9:15 PM",
-    "division": "Softball - Seniors",
-    "away": "LP Violent Vipers - Trinidad",
-    "home": "LP Fabulosas - Masino",
-    "location": "Las Palmas",
-    "field": "West Field",
-    "rawDivision": "Seniors"
-  },
-  {
     "id": "tee-ball-16",
     "date": "2026-10-24",
     "day": "Saturday",

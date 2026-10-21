@@ -39,3 +39,14 @@ test("Supreme vs. LP Diamond Girls - Lugo is moved to Oct 23 East Field", () => 
   );
   assert.equal(gameRevisions[game.id], "2026-10-21T16:47:57Z");
 });
+
+test("cancelled LP Violent Vipers vs. LP Fabulosas game is removed from Oct 23", () => {
+  assert.equal(
+    games.some((game) => game.id === "optional-friday-seniors-2026-10-23"),
+    false
+  );
+  assert.equal(
+    Object.hasOwn(gameRevisions, "optional-friday-seniors-2026-10-23"),
+    false
+  );
+});
