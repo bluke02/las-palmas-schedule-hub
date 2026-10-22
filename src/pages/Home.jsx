@@ -23,7 +23,7 @@ export default function Home() {
   const [selectedTeam, setSelectedTeam] = useState("");
   const [selectedLocation, setSelectedLocation] = useState("");
   const [selectedField, setSelectedField] = useState("");
-  const [activeTab, setActiveTab] = useState("schedule");
+  const [activeTab, setActiveTab] = useState("today");
 
   return (
     <>
