@@ -1,5 +1,6 @@
 import { useState } from "react";
 import TeamFinder from "../components/TeamFinder";
+import TodayView from "../components/TodayView";
 import ScheduleOverview from "../components/ScheduleOverview";
 import MakeupSlots from "../components/MakeupSlots";
 import GameSchedule from "../components/GameSchedule";
@@ -78,6 +79,14 @@ export default function Home() {
 
         <div className="schedule-tabs" role="tablist" aria-label="Schedule views">
           <button
+            className={activeTab === "today" ? "tab-button active" : "tab-button"}
+            onClick={() => setActiveTab("today")}
+            role="tab"
+            aria-selected={activeTab === "today"}
+          >
+            Today
+          </button>
+          <button
             className={activeTab === "schedule" ? "tab-button active" : "tab-button"}
             onClick={() => setActiveTab("schedule")}
             role="tab"
@@ -125,7 +134,9 @@ export default function Home() {
           </button>
         </div>
 
-        {activeTab === "schedule" ? (
+        {activeTab === "today" ? (
+          <TodayView />
+        ) : activeTab === "schedule" ? (
           <ScheduleOverview
             selectedProgram={selectedProgram}
             selectedDivision={selectedDivision}
