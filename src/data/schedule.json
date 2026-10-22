@@ -33,7 +33,8 @@
     "day": "Thursday",
     "field": "West",
     "start": "5:30 PM",
-    "end": "7:00 PM"
+    "end": "7:00 PM",
+    "notes": "Canceled Due to Rain"
   },
   {
     "id": "lp-coyotes-rodriguez",
@@ -51,7 +52,8 @@
     "day": "Thursday",
     "field": "East",
     "start": "5:30 PM",
-    "end": "7:00 PM"
+    "end": "7:00 PM",
+    "notes": "Canceled Due to Rain"
   },
   {
     "id": "lp-red-tails-gomez-player-pitch",
@@ -60,7 +62,8 @@
     "day": "Thursday",
     "field": "East",
     "start": "7:00 PM",
-    "end": "8:30 PM"
+    "end": "8:30 PM",
+    "notes": "Canceled Due to Rain"
   },
   {
     "id": "lp-strikers-salas",
@@ -132,7 +135,8 @@
     "day": "Thursday",
     "field": "West",
     "start": "7:00 PM",
-    "end": "8:30 PM"
+    "end": "8:30 PM",
+    "notes": "Canceled Due to Rain"
   },
   {
     "id": "lp-the-little-legends-j-garcia",
@@ -177,7 +181,8 @@
     "day": "Thursday",
     "field": "Tee Ball",
     "start": "5:00 PM",
-    "end": "6:00 PM"
+    "end": "6:00 PM",
+    "notes": "Canceled Due to Rain"
   },
   {
     "id": "lp-las-chiquipowers-cortez-trinidad",
@@ -186,6 +191,7 @@
     "day": "Thursday",
     "field": "Tee Ball",
     "start": "5:00 PM",
-    "end": "6:00 PM"
+    "end": "6:00 PM",
+    "notes": "Canceled Due to Rain"
   }
 ]
