@@ -6,9 +6,8 @@ const games = JSON.parse(
   await readFile(new URL("../src/data/games.json", import.meta.url), "utf8")
 );
 
-test("South Crest Majors is replaced by the scheduled bye team", () => {
+test("South Crest Majors schedule updates and Oct 24 game cancellation", () => {
   const updatedMatchups = {
-    "d66-2026-10-24-06": ["TH Majors", "SDA Majors"],
     "d66-2026-11-07-07": ["TH Majors", "LP Coyotes - Rodriguez"],
     "d66-2026-11-14-05": ["LP Dirtbags - Ybarra", "LP Coyotes - Rodriguez"],
     "d66-2026-11-21-06": ["SDA Majors", "LP Dirtbags - Ybarra"],
@@ -20,6 +19,11 @@ test("South Crest Majors is replaced by the scheduled bye team", () => {
     assert.ok(game, `Expected game ${gameId} to exist`);
     assert.deepEqual([game.away, game.home], [away, home]);
   }
+
+  assert.equal(
+    games.some((game) => game.id === "d66-2026-10-24-06"),
+    false
+  );
 
   const affectedMajorsGames = games.filter(
     (game) =>

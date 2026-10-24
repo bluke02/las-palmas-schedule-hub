@@ -9,35 +9,15 @@ const gameRevisions = JSON.parse(
   await readFile(new URL("../src/data/gameRevisions.json", import.meta.url), "utf8")
 );
 
-test("Supreme vs. LP Diamond Girls - Lugo is moved to Oct 23 East Field", () => {
-  const game = games.find((entry) => entry.id === "sb-2026-10-24-07");
-
-  assert.ok(game, "Expected the scheduled game to exist");
-  assert.deepEqual(
-    {
-      date: game.date,
-      day: game.day,
-      start: game.start,
-      end: game.end,
-      division: game.division,
-      away: game.away,
-      home: game.home,
-      location: game.location,
-      field: game.field,
-    },
-    {
-      date: "2026-10-23",
-      day: "Friday",
-      start: "7:45 PM",
-      end: "9:15 PM",
-      division: "Softball - Majors",
-      away: "Supreme",
-      home: "LP Diamond Girls - Lugo",
-      location: "Las Palmas",
-      field: "East Field",
-    }
+test("Supreme vs. LP Diamond Girls - Lugo is cancelled on Oct 23", () => {
+  assert.equal(
+    games.some((entry) => entry.id === "sb-2026-10-24-07"),
+    false
   );
-  assert.equal(gameRevisions[game.id], "2026-10-21T16:47:57Z");
+  assert.equal(
+    Object.hasOwn(gameRevisions, "sb-2026-10-24-07"),
+    false
+  );
 });
 
 test("cancelled LP Violent Vipers vs. LP Fabulosas game is removed from Oct 23", () => {
