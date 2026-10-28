@@ -32,8 +32,9 @@ test("Oct 17 LP Coyotes–TH Majors game starts at 11 AM", () => {
 });
 
 test("Oct 17 LP Heavy Hitters–SDA CAPS game is cancelled", () => {
-  assert.equal(
-    games.some((entry) => entry.id === "d66-2026-10-17-07"),
-    false
-  );
+  const game = games.find((entry) => entry.id === "d66-2026-10-17-07");
+
+  assert.equal(game.date, "2026-10-17");
+  assert.equal(game.status, "cancelled");
+  assert.match(game.notes, /cancelled/i);
 });

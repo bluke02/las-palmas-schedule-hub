@@ -9,21 +9,21 @@ const gameRevisions = JSON.parse(
   await readFile(new URL("../src/data/gameRevisions.json", import.meta.url), "utf8")
 );
 
-test("Oct 30 Las Palmas games are cancelled and Minors B is rescheduled", () => {
-  assert.deepEqual(
-    games.filter(
-      (game) => game.date === "2026-10-30" && game.location === "Las Palmas"
-    ),
-    []
+test("Oct 30 originals remain cancelled while Minors B games are rescheduled", () => {
+  const originals = games.filter(
+    (game) => game.date === "2026-10-30" && game.location === "Las Palmas"
   );
+  assert.equal(originals.length, 3);
+  assert.ok(originals.every((game) => game.status === "cancelled"));
+
   assert.deepEqual(
     games.find((game) => game.id === "d66-2026-10-30-02"),
     {
       id: "d66-2026-10-30-02",
-      date: "2026-10-29",
-      day: "Thursday",
-      start: "5:30 PM",
-      end: "7:00 PM",
+      date: "2026-10-30",
+      day: "Friday",
+      start: "6:00 PM",
+      end: "7:30 PM",
       division: "Baseball - Minors B",
       away: "LP Heavy Hitters - Covarrubias",
       home: "LP Red Tails Minors B - Gomez",
@@ -31,16 +31,16 @@ test("Oct 30 Las Palmas games are cancelled and Minors B is rescheduled", () => 
       location: "Las Palmas",
       field: "East Field",
       rawDivision: "Minor B",
-      notes: "Friday Minor B",
+      status: "cancelled",
+      notes: "Friday Minor B; cancelled; rescheduled to October 29",
     }
   );
-  assert.equal(gameRevisions["d66-2026-10-30-02"], "2026-10-20T20:35:53Z");
+  assert.ok(gameRevisions["d66-2026-10-30-02"]);
+  assert.equal(games.find((game) => game.id === "d66-2026-10-29-01").date, "2026-10-29");
+  assert.equal(games.find((game) => game.id === "d66-2026-11-02-01").date, "2026-11-02");
   assert.equal(
-    games.some((game) => game.id === "optional-friday-seniors-2026-10-30"),
-    false
+    games.find((game) => game.id === "optional-friday-seniors-2026-10-30").status,
+    "cancelled"
   );
-  assert.equal(
-    gameRevisions["optional-friday-seniors-2026-10-30"],
-    undefined
-  );
+  assert.ok(gameRevisions["optional-friday-seniors-2026-10-30"]);
 });

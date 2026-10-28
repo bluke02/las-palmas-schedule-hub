@@ -7,6 +7,10 @@ function isLpGame(game) {
   );
 }
 
+export function getScheduledGames(games) {
+  return games.filter((game) => game.status !== "cancelled");
+}
+
 export function filterGamesForSchedule(
   games,
   {

@@ -360,6 +360,24 @@ tbody tr:hover {
   background: #f8fbff;
 }
 
+.game-cancelled td:not(:last-child),
+.calendar-event.cancelled,
+.calendar-bubble-title.cancelled {
+  text-decoration: line-through;
+  text-decoration-color: #b42318;
+  text-decoration-thickness: 2px;
+}
+
+.calendar-event.cancelled {
+  background: #fee4e2;
+  color: #7a271a;
+}
+
+.legend-swatch.cancelled {
+  background: #fee4e2;
+  border: 1px solid #b42318;
+}
+
 .field-revision {
   color: #64748b;
   display: block;

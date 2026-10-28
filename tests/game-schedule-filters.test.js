@@ -1,6 +1,9 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { filterGamesForSchedule } from "../src/utils/gameSchedule.js";
+import {
+  filterGamesForSchedule,
+  getScheduledGames,
+} from "../src/utils/gameSchedule.js";
 
 const games = [
   {
@@ -10,6 +13,15 @@ const games = [
     away: "LP Eagles",
     location: "Las Palmas",
     field: "East Field",
+  },
+  {
+    id: "cancelled-lp-game",
+    division: "Baseball - Minors A",
+    home: "LP Tigers",
+    away: "LP Eagles",
+    location: "Las Palmas",
+    field: "East Field",
+    status: "cancelled",
   },
   {
     id: "other-game",
@@ -57,6 +69,13 @@ test("LP game schedule remains limited to LP teams", () => {
 
   assert.deepEqual(
     filteredGames.map((game) => game.id),
-    ["lp-game"]
+    ["lp-game", "cancelled-lp-game"]
+  );
+});
+
+test("active schedule views exclude cancelled games", () => {
+  assert.deepEqual(
+    getScheduledGames(games).map((game) => game.id),
+    ["lp-game", "other-game", "different-division"]
   );
 });

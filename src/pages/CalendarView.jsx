@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import games from "../data/games.json";
 import schedule from "../data/schedule.json";
+import { getScheduledGames } from "../utils/gameSchedule.js";
 
 const WEEKDAYS = [
   "Sunday",
@@ -31,7 +32,8 @@ function timeToMinutes(time) {
 }
 
 function buildEvents() {
-  const keys = games.map((game) => game.date).sort();
+  const scheduledGames = getScheduledGames(games);
+  const keys = scheduledGames.map((game) => game.date).sort();
   const first = parseKey(keys[0]);
   const last = parseKey(keys[keys.length - 1]);
   const byDate = {};
@@ -39,7 +41,7 @@ function buildEvents() {
     (byDate[key] ||= []).push(event);
   };
 
-  games.forEach((game) =>
+  scheduledGames.forEach((game) =>
     add(game.date, {
       id: `game-${game.id}`,
       type: "game",
@@ -53,6 +55,7 @@ function buildEvents() {
       away: game.away,
       home: game.home,
       notes: game.notes,
+      status: game.status,
     })
   );
 
@@ -130,6 +133,7 @@ export default function CalendarView() {
       <p className="calendar-legend">
         <span className="legend-swatch game" /> Game (Away v Home)
         <span className="legend-swatch practice" /> Practice
+        <span className="legend-swatch cancelled" /> Cancelled
       </p>
 
       <div className="calendar-grid" role="grid">
@@ -151,9 +155,18 @@ export default function CalendarView() {
               {events.map((event) => (
                 <button
                   key={event.id}
-                  className={`calendar-event ${event.type}`}
+                  className={`calendar-event ${event.type}${event.status === "cancelled" ? " cancelled" : ""}`}
                   onClick={() => setSelected({ ...event, date: key })}
-                  title={event.title}
+                  aria-label={
+                    event.status === "cancelled"
+                      ? `${event.title}, cancelled`
+                      : event.title
+                  }
+                  title={
+                    event.status === "cancelled"
+                      ? `${event.title} — Cancelled`
+                      : event.title
+                  }
                 >
                   <span className="calendar-event-time">
                     {event.bye ? "BYE" : event.start}
@@ -185,7 +198,11 @@ export default function CalendarView() {
               ×
             </button>
             <h2>{selected.type === "game" ? "Game" : "Practice"}</h2>
-            <p className="calendar-bubble-title">{selected.title}</p>
+            <p
+              className={`calendar-bubble-title${selected.status === "cancelled" ? " cancelled" : ""}`}
+            >
+              {selected.title}
+            </p>
             <dl>
               <dt>Date</dt>
               <dd>
@@ -207,6 +224,12 @@ export default function CalendarView() {
                   <dd>{selected.away}</dd>
                   <dt>Home</dt>
                   <dd>{selected.home}</dd>
+                </>
+              )}
+              {selected.status === "cancelled" && (
+                <>
+                  <dt>Status</dt>
+                  <dd>Cancelled</dd>
                 </>
               )}
               {!selected.bye && (

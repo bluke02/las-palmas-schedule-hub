@@ -10,23 +10,17 @@ const gameRevisions = JSON.parse(
 );
 
 test("Supreme vs. LP Diamond Girls - Lugo is cancelled on Oct 23", () => {
-  assert.equal(
-    games.some((entry) => entry.id === "sb-2026-10-24-07"),
-    false
-  );
-  assert.equal(
-    Object.hasOwn(gameRevisions, "sb-2026-10-24-07"),
-    false
-  );
+  const game = games.find((entry) => entry.id === "sb-2026-10-24-07");
+
+  assert.equal(game.date, "2026-10-23");
+  assert.equal(game.status, "cancelled");
+  assert.match(game.notes, /cancelled/i);
+  assert.ok(gameRevisions["sb-2026-10-24-07"]);
 });
 
-test("cancelled LP Violent Vipers vs. LP Fabulosas game is removed from Oct 23", () => {
+test("cancelled LP Violent Vipers vs. LP Fabulosas game remains available for tracking", () => {
   assert.equal(
     games.some((game) => game.id === "optional-friday-seniors-2026-10-23"),
-    false
-  );
-  assert.equal(
-    Object.hasOwn(gameRevisions, "optional-friday-seniors-2026-10-23"),
-    false
+    true
   );
 });

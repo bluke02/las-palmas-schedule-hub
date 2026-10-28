@@ -87,11 +87,15 @@ export default function GameSchedule({
                 <th scope="col">Home Team</th>
                 <th scope="col">Location</th>
                 <th scope="col">Field</th>
+                <th scope="col">Notes</th>
               </tr>
             </thead>
             <tbody>
               {sortedGames.map((game) => (
-                <tr key={game.id}>
+                <tr
+                  key={game.id}
+                  className={game.status === "cancelled" ? "game-cancelled" : ""}
+                >
                   <td>{formatDate(game.date)}</td>
                   <td>{game.bye ? "Bye week" : `${game.start} - ${game.end}`}</td>
                   <td>{game.division}</td>
@@ -107,6 +111,7 @@ export default function GameSchedule({
                       </span>
                     )}
                   </td>
+                  <td>{game.notes || "—"}</td>
                 </tr>
               ))}
             </tbody>
