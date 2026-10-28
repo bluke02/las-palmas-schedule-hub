@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import games from "../data/games.json";
 import schedule from "../data/schedule.json";
+import { getScheduledGames } from "../utils/gameSchedule.js";
 
 const WEEKDAYS = [
   "Sunday",
@@ -31,7 +32,8 @@ function timeToMinutes(time) {
 }
 
 function buildEvents() {
-  const keys = games.map((game) => game.date).sort();
+  const scheduledGames = getScheduledGames(games);
+  const keys = scheduledGames.map((game) => game.date).sort();
   const first = parseKey(keys[0]);
   const last = parseKey(keys[keys.length - 1]);
   const byDate = {};
@@ -39,7 +41,7 @@ function buildEvents() {
     (byDate[key] ||= []).push(event);
   };
 
-  games.forEach((game) =>
+  scheduledGames.forEach((game) =>
     add(game.date, {
       id: `game-${game.id}`,
       type: "game",

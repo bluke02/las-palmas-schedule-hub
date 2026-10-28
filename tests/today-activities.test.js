@@ -7,6 +7,12 @@ test("combines today's games and practices sorted by start time", () => {
     { id: "g1", date: "2026-10-22", start: "6:00 PM" },
     { id: "g2", date: "2026-10-23", start: "5:00 PM" },
     { id: "g3", date: "2026-10-22", start: "BYE", bye: true },
+    {
+      id: "g4",
+      date: "2026-10-22",
+      start: "4:00 PM",
+      status: "cancelled",
+    },
   ];
   const practices = [
     { id: "p1", day: "Thursday", start: "5:30 PM" },

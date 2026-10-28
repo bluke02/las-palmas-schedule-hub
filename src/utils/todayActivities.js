@@ -1,3 +1,5 @@
+import { getScheduledGames } from "./gameSchedule.js";
+
 const DAY_NAMES = [
   "Sunday",
   "Monday",
@@ -29,7 +31,7 @@ export function getTodayActivities(games, practices, today = new Date()) {
   const dateString = toLocalDateString(today);
   const dayName = DAY_NAMES[today.getDay()];
 
-  const todaysGames = games
+  const todaysGames = getScheduledGames(games)
     .filter((game) => game.date === dateString)
     .map((game) => ({ ...game, type: "game" }));
   const todaysPractices = practices
