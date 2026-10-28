@@ -9,7 +9,7 @@ const gameRevisions = JSON.parse(
   await readFile(new URL("../src/data/gameRevisions.json", import.meta.url), "utf8")
 );
 
-test("Nov 6 seniors game is updated to Sooners at East Field", () => {
+test("Nov 6 seniors game is updated to SB Diamonds at East Field", () => {
   const game = games.find(
     (entry) => entry.id === "optional-friday-seniors-2026-11-06"
   );
@@ -32,11 +32,11 @@ test("Nov 6 seniors game is updated to Sooners at East Field", () => {
       start: "7:45 PM",
       end: "9:15 PM",
       division: "Softball - Seniors",
-      away: "Sooners",
+      away: "SB Diamonds",
       home: "LP Fabulosas - Masino",
       location: "Las Palmas",
       field: "East Field",
     }
   );
-  assert.equal(gameRevisions[game.id], "2026-10-28T23:28:19Z");
+  assert.equal(gameRevisions[game.id], "2026-10-28T23:33:29Z");
 });
