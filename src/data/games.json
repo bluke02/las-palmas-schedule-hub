@@ -2121,6 +2121,34 @@
     "rawDivision": "8U"
   },
   {
+    "id": "sb-2026-10-28-02",
+    "date": "2026-10-28",
+    "day": "Wednesday",
+    "start": "5:30 PM",
+    "end": "7:00 PM",
+    "division": "Softball - Minors",
+    "away": "Sooners",
+    "home": "LP PocoLocas - Cortez",
+    "hostLeague": "South Bay",
+    "location": "South Bay",
+    "field": "SBLL Field 3",
+    "rawDivision": "Minors"
+  },
+  {
+    "id": "d66-2026-10-28-01",
+    "date": "2026-10-28",
+    "day": "Wednesday",
+    "start": "7:00 PM",
+    "end": "8:30 PM",
+    "division": "Baseball - Majors",
+    "away": "LP Dirtbags - Ybarra",
+    "home": "LP Coyotes - Rodriguez",
+    "hostLeague": "Las Palmas",
+    "location": "Las Palmas",
+    "field": "East Field",
+    "rawDivision": "Majors"
+  },
+  {
     "id": "d66-2026-10-30-01",
     "date": "2026-11-02",
     "day": "Monday",
@@ -2132,6 +2160,20 @@
     "hostLeague": "Las Palmas",
     "location": "Las Palmas",
     "field": "West Field",
+    "rawDivision": "Minor B"
+  },
+  {
+    "id": "d66-2026-11-03-01",
+    "date": "2026-11-03",
+    "day": "Tuesday",
+    "start": "5:30 PM",
+    "end": "7:00 PM",
+    "division": "Baseball - Minors B",
+    "away": "SDA CAPS",
+    "home": "LP The Mighty A's - Beltran",
+    "hostLeague": "Las Palmas",
+    "location": "Las Palmas",
+    "field": "East Field",
     "rawDivision": "Minor B"
   },
   {
