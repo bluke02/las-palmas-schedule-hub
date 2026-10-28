@@ -1,7 +1,7 @@
 import schedule from "../data/schedule.json";
 import allGames from "../data/games.json";
 
-const games = allGames.filter((game) => !game.bye);
+const games = allGames.filter((game) => !game.bye && game.status !== "cancelled");
 
 export default function TeamFinder({
   selectedProgram,

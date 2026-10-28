@@ -6,8 +6,12 @@ const games = JSON.parse(
   await readFile(new URL("../src/data/games.json", import.meta.url), "utf8")
 );
 
-test("Oct 30 Minors B game is rescheduled to Nov 2", () => {
-  const game = games.find((entry) => entry.id === "d66-2026-10-30-01");
+test("Oct 30 original remains cancelled and a replacement is scheduled Nov 2", () => {
+  const original = games.find((entry) => entry.id === "d66-2026-10-30-01");
+  assert.equal(original.date, "2026-10-30");
+  assert.equal(original.status, "cancelled");
+
+  const game = games.find((entry) => entry.id === "d66-2026-11-02-01");
 
   assert.deepEqual(
     {
@@ -32,7 +36,7 @@ test("Oct 30 Minors B game is rescheduled to Nov 2", () => {
       home: "LP Strikers - Salas",
       location: "Las Palmas",
       field: "West Field",
-      notes: undefined,
+      notes: "Rescheduled from October 30",
     }
   );
 });

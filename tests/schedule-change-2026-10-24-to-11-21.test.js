@@ -21,8 +21,8 @@ test("South Crest Majors schedule updates and Oct 24 game cancellation", () => {
   }
 
   assert.equal(
-    games.some((game) => game.id === "d66-2026-10-24-06"),
-    false
+    games.find((game) => game.id === "d66-2026-10-24-06")?.status,
+    "cancelled"
   );
 
   const affectedMajorsGames = games.filter(

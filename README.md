@@ -23,3 +23,7 @@ When changing or adding a game in `src/data/games.json`, add or update that
 game's timestamp in `src/data/gameRevisions.json`. The timestamp must be valid
 ISO 8601 and later than the prior timestamp. Pull requests targeting `main` run
 the timestamp check and the test suite.
+
+Cancelled games stay on the schedule with their original date and details,
+marked as cancelled in the Notes column. Rescheduled games are listed as
+separate rows with a note linking them to the original date.

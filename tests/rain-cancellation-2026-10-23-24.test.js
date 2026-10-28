@@ -17,23 +17,24 @@ const cancelledLocations = new Set([
   "South Bay",
 ]);
 
-test("games at the rain-cancelled locations are removed for Oct 23–24", () => {
-  const remainingGames = games.filter(
+test("games at rain-cancelled locations remain with cancelled status for Oct 23–24", () => {
+  const cancelledGames = games.filter(
     (game) =>
       cancellationDates.has(game.date) && cancelledLocations.has(game.location)
   );
 
-  assert.deepEqual(remainingGames, []);
+  assert.ok(cancelledGames.length > 0);
+  assert.ok(cancelledGames.every((game) => game.status === "cancelled"));
 });
 
-test("removed games do not retain revision timestamps", () => {
+test("preserved cancelled games retain revision timestamps", () => {
   for (const gameId of [
     "tee-ball-17",
     "tee-ball-18",
     "d66-2026-10-24-06",
     "sb-2026-10-24-07",
   ]) {
-    assert.equal(Object.hasOwn(gameRevisions, gameId), false, gameId);
+    assert.ok(gameRevisions[gameId], gameId);
   }
 });
 

@@ -28,7 +28,7 @@ const CHANGE_TYPES = [
 const uniqueSorted = (values) =>
   [...new Set(values.filter(Boolean))].sort((a, b) => a.localeCompare(b));
 
-const games = allGames.filter((game) => !game.bye);
+const games = allGames.filter((game) => !game.bye && game.status !== "cancelled");
 const teams = uniqueSorted(games.flatMap((game) => [game.home, game.away]));
 const locations = uniqueSorted(games.map((game) => game.location));
 const fields = uniqueSorted(games.map((game) => game.field));

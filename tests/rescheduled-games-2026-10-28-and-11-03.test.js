@@ -19,7 +19,7 @@ test("rescheduled Oct 28 and Nov 3 games are included", () => {
           "d66-2026-11-03-01",
         ].includes(game.id)
       )
-      .map(({ id, date, day, start, end, away, home, location, field }) => ({
+      .map(({ id, date, day, start, end, away, home, location, field, notes }) => ({
         id,
         date,
         day,
@@ -29,6 +29,7 @@ test("rescheduled Oct 28 and Nov 3 games are included", () => {
         home,
         location,
         field,
+        notes,
       })),
     [
       {
@@ -41,6 +42,7 @@ test("rescheduled Oct 28 and Nov 3 games are included", () => {
         home: "LP PocoLocas - Cortez",
         location: "South Bay",
         field: "SBLL Field 3",
+        notes: "Rescheduled from October 24",
       },
       {
         id: "d66-2026-10-28-01",
@@ -52,6 +54,7 @@ test("rescheduled Oct 28 and Nov 3 games are included", () => {
         home: "LP Coyotes - Rodriguez",
         location: "Las Palmas",
         field: "East Field",
+        notes: "Rescheduled from October 24",
       },
       {
         id: "d66-2026-11-03-01",
@@ -63,6 +66,7 @@ test("rescheduled Oct 28 and Nov 3 games are included", () => {
         home: "LP The Mighty A's - Beltran",
         location: "Las Palmas",
         field: "East Field",
+        notes: "Rescheduled from October 24",
       },
     ]
   );
@@ -71,6 +75,15 @@ test("rescheduled Oct 28 and Nov 3 games are included", () => {
     "d66-2026-10-28-01",
     "d66-2026-11-03-01",
   ]) {
-    assert.equal(gameRevisions[id], "2026-10-28T01:05:04Z");
+    assert.equal(gameRevisions[id], "2026-10-28T01:19:45Z");
+  }
+  for (const id of [
+    "sb-2026-10-24-02",
+    "d66-2026-10-24-03",
+    "d66-2026-10-24-10",
+  ]) {
+    const original = games.find((game) => game.id === id);
+    assert.equal(original.status, "cancelled", id);
+    assert.match(original.notes, /rescheduled/i, id);
   }
 });

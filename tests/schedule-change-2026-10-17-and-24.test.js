@@ -20,6 +20,18 @@ test("Oct 17 Tee Ball games swap Little Rascals and ChiquiPowers", () => {
       away: "LP The Rookies - E Garcia/Sifuentes",
       home: "LP Las ChiquiPowers - Cortez/Trinidad",
     },
+    "tee-ball-17": {
+      date: "2026-10-24",
+      start: "10:15 AM",
+      away: "LP The Rookies - E Garcia/Sifuentes",
+      home: "LP Little Rascals - Valadez",
+    },
+    "tee-ball-18": {
+      date: "2026-10-24",
+      start: "11:30 AM",
+      away: "LP - The Little Legends - J Garcia",
+      home: "LP Las ChiquiPowers - Cortez/Trinidad",
+    },
   };
 
   for (const [gameId, expected] of Object.entries(expectedGames)) {
@@ -36,4 +48,7 @@ test("Oct 17 Tee Ball games swap Little Rascals and ChiquiPowers", () => {
       expected
     );
   }
+
+  assert.equal(games.find((game) => game.id === "tee-ball-17").status, "cancelled");
+  assert.equal(games.find((game) => game.id === "tee-ball-18").status, "cancelled");
 });

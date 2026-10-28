@@ -36,7 +36,12 @@ export default function TodayView() {
             <tbody>
               {activities.map((activity) =>
                 activity.type === "game" ? (
-                  <tr key={activity.id}>
+                  <tr
+                    key={activity.id}
+                    className={
+                      activity.status === "cancelled" ? "game-cancelled" : ""
+                    }
+                  >
                     <td>
                       {activity.bye
                         ? "Bye week"
