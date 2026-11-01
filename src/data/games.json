@@ -2657,6 +2657,20 @@
     "notes": "Rescheduled from October 24"
   },
   {
+    "id": "d66-2026-11-03-02",
+    "date": "2026-11-03",
+    "day": "Tuesday",
+    "start": "7:00 PM",
+    "end": "8:30 PM",
+    "division": "Softball - Seniors",
+    "away": "Cherry Bombs",
+    "home": "LP Fabulosas - Masino",
+    "hostLeague": "Las Palmas",
+    "location": "Las Palmas",
+    "field": "East Field",
+    "rawDivision": "Seniors"
+  },
+  {
     "id": "d66-2026-10-30-02",
     "date": "2026-10-30",
     "day": "Friday",
