@@ -4013,13 +4013,12 @@
     "start": "9:00 AM",
     "end": "11:00 AM",
     "division": "Baseball - Majors",
-    "away": "SDA Majors",
-    "home": "LP Dirtbags - Ybarra",
+    "away": "LP Dirtbags - Ybarra",
+    "home": "SDA Majors",
     "hostLeague": "Southcrest",
-    "location": "Southcrest",
+    "location": "SDA",
     "field": "Major Field",
-    "rawDivision": "Majors",
-    "notes": "Full-league away day for SDA"
+    "rawDivision": "Majors"
   },
   {
     "id": "tee-ball-29",

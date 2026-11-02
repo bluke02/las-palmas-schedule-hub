@@ -10,7 +10,7 @@ test("South Crest Majors schedule updates and Oct 24 game cancellation", () => {
   const updatedMatchups = {
     "d66-2026-11-07-07": ["TH Majors", "LP Coyotes - Rodriguez"],
     "d66-2026-11-14-05": ["LP Dirtbags - Ybarra", "LP Coyotes - Rodriguez"],
-    "d66-2026-11-21-06": ["SDA Majors", "LP Dirtbags - Ybarra"],
+    "d66-2026-11-21-06": ["LP Dirtbags - Ybarra", "SDA Majors"],
   };
 
   for (const [gameId, [away, home]] of Object.entries(updatedMatchups)) {
@@ -19,6 +19,13 @@ test("South Crest Majors schedule updates and Oct 24 game cancellation", () => {
     assert.ok(game, `Expected game ${gameId} to exist`);
     assert.deepEqual([game.away, game.home], [away, home]);
   }
+
+  const updatedSdaGame = games.find(
+    (game) => game.id === "d66-2026-11-21-06"
+  );
+  assert.equal(updatedSdaGame.location, "SDA");
+  assert.equal(updatedSdaGame.field, "Major Field");
+  assert.equal(updatedSdaGame.notes, undefined);
 
   assert.equal(
     games.find((game) => game.id === "d66-2026-10-24-06")?.status,
