@@ -26,7 +26,7 @@ test("Nov 14 Dirtbags vs Coyotes game is updated to Las Palmas East Field", () =
     {
       date: "2026-11-14",
       start: "10:45 AM",
-      end: "11:45 AM",
+      end: "12:30 PM",
       away: "LP Dirtbags - Ybarra",
       home: "LP Coyotes - Rodriguez",
       hostLeague: "Las Palmas",
@@ -34,5 +34,5 @@ test("Nov 14 Dirtbags vs Coyotes game is updated to Las Palmas East Field", () =
       field: "East Field",
     }
   );
-  assert.equal(gameRevisions[game.id], "2026-11-02T18:41:13Z");
+  assert.equal(gameRevisions[game.id], "2026-11-02T18:56:54Z");
 });
