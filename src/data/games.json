@@ -2152,7 +2152,7 @@
     "field": "East Field",
     "rawDivision": "Minor B",
     "status": "cancelled",
-    "notes": "Friday Minor B; cancelled due to rain"
+    "notes": "Friday Minor B; cancelled due to rain; rescheduled to November 9"
   },
   {
     "id": "optional-friday-seniors-2026-10-23",
@@ -3464,6 +3464,21 @@
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Seniors"
+  },
+  {
+    "id": "d66-2026-11-09-01",
+    "date": "2026-11-09",
+    "day": "Monday",
+    "start": "6:00 PM",
+    "end": "7:30 PM",
+    "division": "Baseball - Minors B",
+    "away": "LP Red Tails Minors B - Gomez",
+    "home": "LP Strikers - Salas",
+    "hostLeague": "Las Palmas",
+    "location": "Las Palmas",
+    "field": "West Field",
+    "rawDivision": "Minor B",
+    "notes": "Rescheduled from October 23"
   },
   {
     "id": "d66-2026-11-13-01",
