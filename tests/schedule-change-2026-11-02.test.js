@@ -5,13 +5,21 @@ import test from "node:test";
 const games = JSON.parse(
   await readFile(new URL("../src/data/games.json", import.meta.url), "utf8")
 );
+const gameRevisions = JSON.parse(
+  await readFile(new URL("../src/data/gameRevisions.json", import.meta.url), "utf8")
+);
 
-test("Oct 30 original remains cancelled and a replacement is scheduled Nov 2", () => {
+test("Nov 2 game is cancelled and rescheduled to Nov 10 on East Field", () => {
   const original = games.find((entry) => entry.id === "d66-2026-10-30-01");
   assert.equal(original.date, "2026-10-30");
   assert.equal(original.status, "cancelled");
 
-  const game = games.find((entry) => entry.id === "d66-2026-11-02-01");
+  const cancelled = games.find((entry) => entry.id === "d66-2026-11-02-01");
+  assert.equal(cancelled.status, "cancelled");
+  assert.match(cancelled.notes, /cancelled due to no lights/i);
+  assert.match(cancelled.notes, /rescheduled to November 10/i);
+
+  const game = games.find((entry) => entry.id === "d66-2026-11-10-01");
 
   assert.deepEqual(
     {
@@ -27,16 +35,18 @@ test("Oct 30 original remains cancelled and a replacement is scheduled Nov 2", (
       notes: game.notes,
     },
     {
-      date: "2026-11-02",
-      day: "Monday",
-      start: "6:00 PM",
-      end: "7:30 PM",
+      date: "2026-11-10",
+      day: "Tuesday",
+      start: "5:30 PM",
+      end: "7:00 PM",
       division: "Baseball - Minors B",
       away: "LP The Mighty A's - Beltran",
       home: "LP Strikers - Salas",
       location: "Las Palmas",
-      field: "West Field",
-      notes: "Rescheduled from October 30",
+      field: "East Field",
+      notes: "Rescheduled from November 2",
     }
   );
+  assert.equal(gameRevisions["d66-2026-11-02-01"], "2026-11-03T22:06:05Z");
+  assert.equal(gameRevisions["d66-2026-11-10-01"], "2026-11-03T22:10:21Z");
 });

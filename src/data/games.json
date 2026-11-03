@@ -2639,7 +2639,23 @@
     "location": "Las Palmas",
     "field": "West Field",
     "rawDivision": "Minor B",
-    "notes": "Rescheduled from October 30"
+    "status": "cancelled",
+    "notes": "Rescheduled from October 30; cancelled due to no lights; rescheduled to November 10"
+  },
+  {
+    "id": "d66-2026-11-10-01",
+    "date": "2026-11-10",
+    "day": "Tuesday",
+    "start": "5:30 PM",
+    "end": "7:00 PM",
+    "division": "Baseball - Minors B",
+    "away": "LP The Mighty A's - Beltran",
+    "home": "LP Strikers - Salas",
+    "hostLeague": "Las Palmas",
+    "location": "Las Palmas",
+    "field": "East Field",
+    "rawDivision": "Minor B",
+    "notes": "Rescheduled from November 2"
   },
   {
     "id": "d66-2026-11-03-01",
