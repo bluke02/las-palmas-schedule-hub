@@ -37,8 +37,8 @@ test("Nov 2 game is cancelled and rescheduled to Nov 10 on East Field", () => {
     {
       date: "2026-11-10",
       day: "Tuesday",
-      start: "6:00 PM",
-      end: "7:30 PM",
+      start: "5:30 PM",
+      end: "7:00 PM",
       division: "Baseball - Minors B",
       away: "LP The Mighty A's - Beltran",
       home: "LP Strikers - Salas",
@@ -48,5 +48,5 @@ test("Nov 2 game is cancelled and rescheduled to Nov 10 on East Field", () => {
     }
   );
   assert.equal(gameRevisions["d66-2026-11-02-01"], "2026-11-03T22:06:05Z");
-  assert.equal(gameRevisions["d66-2026-11-10-01"], "2026-11-03T22:06:05Z");
+  assert.equal(gameRevisions["d66-2026-11-10-01"], "2026-11-03T22:10:21Z");
 });
