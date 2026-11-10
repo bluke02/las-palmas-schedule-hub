@@ -2658,6 +2658,21 @@
     "notes": "Rescheduled from November 2"
   },
   {
+    "id": "d66-2026-11-10-02",
+    "date": "2026-11-10",
+    "day": "Tuesday",
+    "start": "5:30 PM",
+    "end": "7:00 PM",
+    "division": "Baseball - Minors B",
+    "away": "LP Heavy Hitters - Covarrubias",
+    "home": "LP Thunderbolts - Silva/Dager",
+    "hostLeague": "Las Palmas",
+    "location": "Las Palmas",
+    "field": "West Field",
+    "rawDivision": "Minor B",
+    "notes": "During Thunderbolts regular practice"
+  },
+  {
     "id": "d66-2026-11-03-01",
     "date": "2026-11-03",
     "day": "Tuesday",
