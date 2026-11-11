@@ -36,3 +36,29 @@ test("Nov 14 Dirtbags vs Coyotes game is updated to Las Palmas East Field", () =
   );
   assert.equal(gameRevisions[game.id], "2026-11-02T18:56:54Z");
 });
+
+test("Nov 14 Storm vs Violent Vipers game starts at 12:45 PM", () => {
+  const game = games.find((entry) => entry.id === "sb-2026-11-14-11");
+
+  assert.deepEqual(
+    {
+      date: game.date,
+      start: game.start,
+      end: game.end,
+      away: game.away,
+      home: game.home,
+      location: game.location,
+      field: game.field,
+    },
+    {
+      date: "2026-11-14",
+      start: "12:45 PM",
+      end: "2:15 PM",
+      away: "Storm",
+      home: "LP Violent Vipers - Trinidad",
+      location: "Las Palmas",
+      field: "East Field",
+    }
+  );
+  assert.equal(gameRevisions[game.id], "2026-11-11T17:21:31Z");
+});
